@@ -1,0 +1,289 @@
+@import "_vars";
+@import "_mixin";
+@import "_reset";
+
+*{
+  padding: 0;
+  margin: 0;
+
+}
+ul{
+  list-style-type:none;
+}
+body{
+  background-color: $background-color;
+}
+.button1{
+  @include Inter(0.83vw,600,2.1vh);
+  color:$main-color;
+  background-color:$secondary-color;
+  border-radius: 5px;
+  border-color: $secondary-color;
+}
+.button2{
+  @include Inter(0.83vw,600,2.1vh);
+  color:$main-color;
+  background-color: $secondary-bg-color;
+  border-radius: 5px;
+  border-color: $secondary-color;
+}
+.lscard{
+  overflow: hidden;
+  text-align: center;
+  @include Flex(column,center,flex-end,0.1vh);
+  height:46.667vh;
+  width: 19.583vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+  .baner {
+    background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/Hero Section.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    }
+    .header {
+      backdrop-filter: brightness(90%);
+      padding-top: 2.5vh;
+      @include Flex(row, center, space-around, 2.083vw);
+
+      .Logo {
+        @include Merriweather(1.667vw, 700, 3.704vh);
+        color: $main-color;
+      }
+
+      .nav {
+        &-list {
+          @include Flex(row, center, center, 1.5vw);
+
+          &-item {
+            &__link {
+              color: $nav-color;
+              @include Inter(0.83vw, 600, 2.1vh);
+
+              &:hover {
+                padding: 0.2vh 0.2vw;
+                color: $main-color;
+                background-color: rgba(0, 0, 0, 0.3);
+              }
+            }
+
+          }
+        }
+      }
+
+      .buttons {
+        @include Flex(row, center, center, 0.8vw);
+
+        &-svg {
+          border: 1px solid $border-color;
+          border-radius: 5px;
+
+          &__img {
+            padding: 0.2vh 0.2vw;
+          }
+        }
+
+        &__btn1 {
+          padding: 0.5vh 0.4vw;
+        }
+
+        &__btn2 {
+          padding: 0.5vh 0.4vw;
+        }
+      }
+    }
+
+    .section1 {
+      backdrop-filter: brightness(90%);
+      width: 45%;
+      padding: 25vh 30vw 10vh 30vw;
+      @include Flex(column, center, center, 5.963vh);
+      &__title {
+        @include Inter(2.1vw, 500, 5.185vh);
+        color: $main-color;
+        text-align: center;
+      }
+
+      &__text {
+        @include Inter(0.9vw, 500, 2.407vh);
+        color: rgba(154, 154, 154, 0.58);
+        text-align: center;
+      }
+
+      &-buttons {
+        @include Flex(row, center, center, 0.9vw);
+
+        &__btn1 {
+          @include Flex(row, center, center, 0.1vw);
+          padding: 0.8vh 0.5vw;
+        }
+
+        &__btn2 {
+          padding: 0.9vh 0.5vw;
+        }
+      }
+      &-trend {
+        margin-top: 3vh;
+        @include Flex(column, center, center, 0.5vw);
+
+        &__title {
+          @include Inter(1.2vw, 600, 2.963vh);
+          color: $main-color;
+          padding-bottom: 1.5vh;
+        }
+
+        &-slider {
+          @include Flex(row, center, space-between, 2vw);
+
+          &-card1 {
+            height: 23.148vh;
+            width: 14.896vw;
+            background-image: url("../img/card1.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &__text {
+              display: flex;
+              text-align: center;
+              justify-content: center;
+              align-items: flex-end;
+              @include Inter(1.2vw, 700, 2.963vh);
+              color: $main-color;
+              width: 100%;
+              height: 100%;
+              padding-bottom: 1vh;
+              backdrop-filter: brightness(50%);
+            }
+          }
+
+          &-card2 {
+            height: 23.148vh;
+            width: 14.896vw;
+            background-image: url("../img/card2.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @include Flex(row, flex-end, center, 0);
+          }
+
+          &-card3 {
+            height: 23.148vh;
+            width: 14.896vw;
+            background-image: url("../img/Hero Section.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @include Flex(row, flex-end, center, 0);
+          }
+          &-card4 {
+            height: 23.148vh;
+            width: 14.896vw;
+            background-image: url("../img/card4.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @include Flex(row, flex-end, center, 0);
+          }
+          &-card5 {
+            height: 23.148vh;
+            width: 14.896vw;
+            background-image: url("../img/card5.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @include Flex(row, flex-end, center, 0);
+          }
+        }
+      }
+    }
+    .section2{
+      padding: 10vh 0 ;
+      @include Flex(column,center,center,1.5vh);
+      overflow-x:hidden;
+      &__title{
+        text-align: center;
+        width: 40%;
+        @include Inter(2.6vw,600,3.185vw);
+        color: $main-color;
+      }
+      &-catalog{
+        @include Flex(row,center,center,0);
+        &__btn{
+          background-color: rgba(36, 35, 35, 0);
+          border-color: rgba(36, 35, 35, 0);
+          border-radius: 8px;
+          width: 5vw;
+          height: 4vh;
+          @include Inter(0.9vw, 500, 2.407vh);
+          color: $secondary-bg-color;
+          &:hover{
+            color: $main-color;
+            background-color: rgba(36, 35, 35, 0.25);
+            border-color: rgba(36, 35, 35, 0.25);
+            border-radius: 8px;
+          }
+        }
+      }
+      &-listcatalog{
+        padding: 10vh 0 10vh 15vw;
+        @include Flex(row,center,center,5vw);
+        flex-wrap: nowrap;
+        overflow-x:hidden;
+        &-card{
+          background-image:url("../img/lscard1.png");
+          &__title{
+            @include Inter(1.6vw,600,2.185vw);
+            color: $main-color;
+          }
+          &__text{
+            height: 4vh;
+            color: $secondary-bg-color;
+            @include Inter(0.9vw, 500, 2.407vh);
+          }
+        }
+        &-card2{
+          background-image:url("../img/lscard2.png");
+        }
+        &-card3{
+          background-image:url("../img/lscard3.png");
+        }
+        &-card4{
+          background-image:url("../img/lscard4.png");
+        }
+      }
+    }
+    .section3{
+      @include Flex(row,center,center,5vw);
+      padding: 10vh 0;
+      &-container2{
+        width: 35%;
+        &__title{
+          color: $main-color;
+          @include Inter(2.4vw,600,5.185vh);
+        }
+        &__subtitle{
+          color: $secondary-bg-color;
+          @include Inter(0.9vw,500,2.1vh);
+        }
+      }
+    }
+.section4{
+  @include Flex(row,center,center,5vw);
+  padding: 10vh 0;
+  &-container1{
+    width: 35%;
+    &__title{
+      color: $main-color;
+      @include Inter(2.4vw,600,5.185vh);
+    }
+    &__subtitle{
+      color: $secondary-bg-color;
+      @include Inter(0.9vw,500,2.1vh);
+    }
+  }
+}
