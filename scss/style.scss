@@ -35,6 +35,7 @@ body{
   width: 19.583vw;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 
@@ -235,12 +236,14 @@ body{
         flex-wrap: nowrap;
         overflow-x:hidden;
         &-card{
-          background-image:url("../img/lscard1.png");
+          background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/lscard1.png");
           &__title{
+            backdrop-filter: brightness(90%);
             @include Inter(1.6vw,600,2.185vw);
             color: $main-color;
           }
           &__text{
+            backdrop-filter: brightness(90%);
             height: 4vh;
             color: $secondary-bg-color;
             @include Inter(0.9vw, 500, 2.407vh);
@@ -360,21 +363,25 @@ body{
 .footer{
   @include Flex(column,center,center,6vh);
   padding-top: 7vh;
-  &-container1{
-    @include Flex(row,center,space-around,3vw);
+  &-container1 {
+    @include Flex(row, center, space-around, 3vw);
+
     .Logo {
       @include Merriweather(1.667vw, 700, 3.704vh);
       color: $main-color;
     }
-    &-texts{
+
+    &-texts {
       width: 20%;
-      &__text{
-        color:$nav-color;
+
+      &__text {
+        color: $nav-color;
       }
     }
+  }
+  &-container2{
     &-list{
       @include Flex(column,flex-start,center,1vh);
-
       &-item{
         &__link{
           color:$main-color;
@@ -420,5 +427,275 @@ body{
 
 
 @media screen and (max-width: 1512px) and (min-width: 375px) {
+  .header{
+    padding: 0;
+    .Logo{
+      @include Merriweather(24px,700,40px);
+    }
+    .nav{
+      display: none;
+    }
+    .buttons{
+      display: none;
+    }
+  }
+  .section1 {
+    padding: 10px;
+    width: 100%;
+    @include Flex(column, center, center, 0);
+
+    &__title {
+      width: 80%;
+      @include Inter(24px, 600, 32px);
+    }
+
+    &__text {
+      width: 80%;
+      @include Inter(14px, 500, 20px);
+    }
+
+    &-buttons {
+      padding-top: 0.5vh;
+      @include Flex(column, center, center, 0.5vh);
+
+      &__btn1 {
+        @include Flex(row, center, center, 0.2vw);
+        @include Inter(14px, 600, 20px);
+        padding: 0.2vh 23.5vw;
+      }
+
+      &__btn2 {
+        @include Inter(14px, 600, 20px);
+        padding: 0.9vh 29.5vw;
+      }
+    }
+
+    &-trend {
+      &__title {
+        @include Inter(18px, 600, 26px);
+        text-align: center;
+      }
+    &-slider{
+      width: 100%;
+      @include Flex(row,center,center,0.1vw);
+      &-card1{
+        display: none;
+        &__text{
+          @include Inter(18px, 600, 26px);
+        }
+      }
+      &-card2{
+        display: none;
+      }
+      &-card3{
+        width: 80%;
+      }
+      &-card4{
+        display: none;
+      }
+      &-card5{
+        display: none;
+      }
+    }
+    }
+  }
+.main {
+  .section2 {
+    padding-top: 45px;
+
+    &__title {
+      width: 80%;
+      @include Inter(24px, 600, 32px);
+    }
+
+    &-catalog {
+      overflow-x: clip;
+      margin-left: 180px;
+
+      &__btn {
+        width: 65px;
+        height: 52px;
+        @include Inter(14px, 600, 20px);
+      }
+    }
+
+    &-listcatalog {
+      padding: 0;
+
+      &-card {
+        display: none;
+
+        &__title {
+          @include Inter(18px, 600, 26px);
+        }
+
+        &__text {
+          @include Inter(14px, 500, 20px);
+        }
+      }
+
+      &-card2 {
+        width: 90%;
+      }
+
+      &-card3 {
+        display: none;
+      }
+
+      &-card4 {
+        display: none;
+      }
+
+    }
+  }
+
+  .section3 {
+    padding-top: 15px;
+    @include Flex(column, center, center, 1vh);
+
+    &-container1 {
+      @include Flex(column, center, center, 2vh);
+
+      &__img {
+        width: 90%;
+      }
+    }
+
+    &-container2 {
+      width: 90%;
+
+      &__title {
+        @include Inter(24px, 600, 32px);
+      }
+
+      &__subtitle {
+        @include Inter(14px, 500, 20px);
+      }
+    }
+  }
+
+  .section4 {
+    padding-top: 15px;
+    @include Flex(column, center, center, 1vh);
+
+    &-container2 {
+      @include Flex(column, center, center, 2vh);
+
+      &__img {
+        width: 90%;
+      }
+    }
+
+    &-container1 {
+      order: 1;
+      width: 90%;
+
+      &__title {
+        @include Inter(24px, 600, 32px);
+      }
+
+      &__subtitle {
+        @include Inter(14px, 500, 20px);
+      }
+    }
+  }
+
+  .section5 {
+    padding-top: 15px;
+
+    &-texts {
+      @include Flex(column, center, center, 4vw);
+      width: 80%;
+
+      &__title {
+        @include Inter(24px, 600, 32px);
+      }
+
+      &__subtitle {
+        @include Inter(14px, 500, 20px);
+      }
+    }
+    &-list {
+      &-item {
+        &-texts {
+          &__title {
+            @include Inter(18px, 600, 26px);
+          }
+
+          &__text {
+            display: none;
+            @include Inter(14px, 500, 20px);
+          }
+        }
+      }
+    }
+  }
+  .section6 {
+    &__title {
+      width: 87%;
+      @include Inter(24px, 600, 32px);
+    }
+
+    &__text {
+      width: 87%;
+      @include Inter(14px, 500, 20px);
+    }
+
+    &-inputs {
+      @include Flex(column, center, center, 1vh);
+      &__input{
+        width: 144%;
+      }
+      &__btn {
+        width: 159%;
+        @include Inter(14px, 600, 20px);
+      }
+    }
+  }
+}
+  .footer{
+padding-left: 15px;
+    @include Flex(column, flex-start, flex-start, 3vw);
+    &-container1 {
+      &-texts {
+        width: 99%;
+
+        .Logo {
+          @include Merriweather(24px, 700, 40px);
+        }
+      }
+    }
+    &-container2{
+      @include Flex(row, flex-start, flex-start, 4vw);
+      flex-wrap: wrap;
+      &-list{
+        padding-right: 105px;
+        @include Flex(column, flex-start, flex-start, 3vw);
+      }
+      &-text2{
+        margin-top: -100px;
+        margin-left: 180px;
+        &__title{
+          @include Inter(14px, 600, 20px);
+        }
+      }
+    }
+    &-under{
+      width: 90%;
+      @include Flex(column, flex-start, flex-start, 3vw);
+      &__text{
+        @include Inter(14px, 500, 20px);
+      }
+      &-under2{
+        padding: 0;
+        @include Flex(row,center,space-between,1vw);
+        &__text{
+          @include Inter(14px, 500, 20px);
+        }
+
+      }
+    }
+  }
+
 
 }
