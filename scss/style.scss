@@ -265,7 +265,7 @@ body{
         flex-wrap: nowrap;
         overflow-x:hidden;
         &-card{
-          background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/lscard1.png");
+          background-image:url("../img/lscard1.png");
           &__title{
             backdrop-filter: brightness(90%);
             @include Inter(1.6vw,600,2.185vw);
@@ -350,15 +350,24 @@ body{
           color:$main-color;
         }
         &__text{
-        @include Inter(0.9vw,500,2.4vh);
+          display: none;
+        @include Inter(18px,500,26px);
           color: $border-color;
+        }
+        &__text.open {
+          display: block;
+          @include Inter(14px, 500, 20px);
         }
       }
       &__img{
+        display: block;
         padding: 3vh 0;
-        display: flex;
-        align-self: flex-start;
+
       }
+      &__img.minus {
+        content: url('../img/minus-cirlce.svg');
+      }
+
     }
   }
 }
@@ -459,45 +468,37 @@ body{
 
 @media screen and (max-width: 1512px) and (min-width: 375px) {
   ::-webkit-scrollbar{
-    height: 2px;
-  }
-  ::-webkit-scrollbar-track{
-background-color: #FFFFFF;
-  }
-  ::-webkit-scrollbar-thumb{
-    background-color: #101010;
+    height: 0;
   }
   .header{
-    padding: 0;
+    padding-top: 20px;
     &-burger{
       background-color: rgba(16, 16, 16, 0);
       display: block;
       border: 1px solid $border-color;
-      padding: 5px;
-      z-index: 2;
+      padding: 25px;
     }
 
 
     .Logo{
-      @include Merriweather(24px,700,40px);
+      @include Merriweather(48px,700,40px);
     }
     .nav{
       display: none;
       padding: 0;
       margin: 0;
-      position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
       transform: translateY(-100%);
       transition: transform 0.5s ease, opacity 0.5s ease;
-      z-index: 1;
       &-list{
-        background-color: $background-color;
-        @include Flex(column,center,center,0);
+        background-color: transparent;
+        @include Flex(column,center,center,0.5vh);
         &-item{
+          padding: 15px;
           &__link{
-            @include Inter(16px,600,24px);
+            @include Inter(32px,600,24px);
           }
         }
       }
@@ -506,6 +507,7 @@ background-color: #FFFFFF;
       display: block;
       transform: translateY(0);
       opacity: 1;
+      z-index: 2;
     }
 
     .buttons{
@@ -513,7 +515,7 @@ background-color: #FFFFFF;
     }
   }
   .section1 {
-    padding: 10px;
+    padding: 50px 20px;
     width: 100%;
     @include Flex(column, center, center, 0);
 
@@ -528,37 +530,40 @@ background-color: #FFFFFF;
     }
 
     &-buttons {
-      padding-top: 0.5vh;
+      width: 80%;
+      padding-top: 2vh;
       @include Flex(column, center, center, 0.5vh);
 
       &__btn1 {
+        width: 100%;
         @include Flex(row, center, center, 0.2vw);
-        @include Inter(14px, 600, 20px);
-        padding: 0.2vh 23.5vw;
+        @include Inter(28px, 600, 20px);
+        padding: 1vh 0;
       }
 
       &__btn2 {
-        @include Inter(14px, 600, 20px);
-        padding: 0.9vh 29.5vw;
+        width: 100%;
+        @include Inter(28px, 600, 20px);
+        padding: 1vh 0;
       }
     }
 
     &-trend {
       &__title {
-        @include Inter(18px, 600, 26px);
+        @include Inter(30px, 600, 26px);
         text-align: center;
       }
     &-slider{
       scroll-snap-type: x mandatory;
       overflow-x: scroll;
-      scroll-padding: 30px;
+      scroll-padding-left: 100px;
       width: 100%;
       @include Flex(row,flex-start,flex-start,5vw);
       &-card1{
         flex: 0 0 80%;
         scroll-snap-align: start;
         &__text{
-          @include Inter(18px, 600, 26px);
+          @include Inter(36px, 600, 26px);
         }
       }
       &-card2{flex: 0 0 80%;
@@ -586,41 +591,44 @@ background-color: #FFFFFF;
     }
 
     &-catalog {
-      overflow-x: clip;
-      margin-left: 180px;
-
+      @include Flex(row,flex-start,flex-start,15px);
+      width: 100%;
       &__btn {
-        width: 65px;
-        height: 52px;
-        @include Inter(14px, 600, 20px);
+        width: 120px;
+        height: 100px;
+        @include Inter(28px, 600, 20px);
       }
     }
 
     &-listcatalog {
+      @include Flex(row,flex-start,flex-start,30px);
       padding: 0;
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+      width: 100%;
 
-      &-card {
-        display: none;
+      &-card {flex: 0 0 80%;
+        scroll-snap-align: center;
 
         &__title {
-          @include Inter(18px, 600, 26px);
+          @include Inter(36px, 600, 26px);
         }
 
         &__text {
-          @include Inter(14px, 500, 20px);
+          @include Inter(28px, 500, 20px);
         }
       }
 
-      &-card2 {
-        width: 90%;
+      &-card2 {flex: 0 0 80%;
+        scroll-snap-align: center;
       }
 
-      &-card3 {
-        display: none;
+      &-card3 {flex: 0 0 80%;
+        scroll-snap-align: center;
       }
 
-      &-card4 {
-        display: none;
+      &-card4 {flex: 0 0 80%;
+        scroll-snap-align: center;
       }
 
     }
@@ -685,22 +693,21 @@ background-color: #FFFFFF;
       width: 80%;
 
       &__title {
-        @include Inter(24px, 600, 32px);
+        @include Inter(48px, 600, 32px);
       }
 
       &__subtitle {
-        @include Inter(14px, 500, 20px);
+        @include Inter(23px, 500, 20px);
       }
     }
     &-list {
       &-item {
         &-texts {
           &__title {
-            @include Inter(18px, 600, 26px);
+            @include Inter(36px, 600, 26px);
           }
 
           &__text {
-            display: none;
             @include Inter(14px, 500, 20px);
           }
         }
@@ -738,7 +745,7 @@ padding-left: 15px;
         width: 99%;
 
         .Logo {
-          @include Merriweather(24px, 700, 40px);
+          @include Merriweather(48px, 700, 40px);
         }
       }
     }
@@ -746,12 +753,17 @@ padding-left: 15px;
       @include Flex(row, flex-start, flex-start, 4vw);
       flex-wrap: wrap;
       &-list{
-        padding-right: 45px;
+        padding-right: 55px;
         @include Flex(column, flex-start, flex-start, 3vw);
+        &-item{
+          &__link{
+            @include Inter(20px, 600, 20px);
+          }
+        }
       }
       &-text2{
         &__title{
-          @include Inter(14px, 600, 20px);
+          @include Inter(28px, 600, 20px);
         }
       }
     }
@@ -759,13 +771,13 @@ padding-left: 15px;
       width: 90%;
       @include Flex(column, flex-start, flex-start, 3vw);
       &__text{
-        @include Inter(14px, 500, 20px);
+        @include Inter(28px, 500, 20px);
       }
       &-under2{
         padding: 0;
         @include Flex(row,center,space-between,1vw);
         &__text{
-          @include Inter(14px, 500, 20px);
+          @include Inter(28px, 500, 20px);
         }
 
       }
