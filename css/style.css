@@ -42,6 +42,34 @@ body {
   background-size: cover;
   background-position: center; }
 
+.baner1 {
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.9)), url("../img/baner1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; }
+
+.baner2 {
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.9)), url("../img/baner2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; }
+
+.baner3 {
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.9)), url("../img/baner3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; }
+
+.baner4 {
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.9)), url("../img/baner4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; }
+
 .baner {
   background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.9)), url("../img/Hero Section.png");
   background-repeat: no-repeat;
@@ -63,6 +91,8 @@ body {
     font-weight: 700;
     line-height: 3.704vh;
     color: #FFFFFF; }
+  .header-burger {
+    display: none; }
   .header .nav-list {
     display: flex;
     flex-direction: row;
@@ -459,32 +489,38 @@ body {
       width: 20%; }
       .footer-container1-texts__text {
         color: #878787; }
-  .footer-container2-list {
+  .footer-container2 {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    gap: 1vh; }
-    .footer-container2-list-item__link {
-      color: #FFFFFF; }
-  .footer-container2-text2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1vh; }
-    .footer-container2-text2__title {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9vw;
-      font-weight: 600;
-      line-height: 2.1vh;
-      color: #FFFFFF; }
-    .footer-container2-text2-image {
+    gap: 3vw; }
+    .footer-container2-list {
       display: flex;
-      flex-direction: row;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
       justify-content: center;
-      gap: 0.5vw; }
+      gap: 1vh; }
+      .footer-container2-list-item__link {
+        color: #FFFFFF; }
+    .footer-container2-text2 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1vh; }
+      .footer-container2-text2__title {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9vw;
+        font-weight: 600;
+        line-height: 2.1vh;
+        color: #FFFFFF; }
+      .footer-container2-text2-image {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5vw; }
   .footer-under {
     width: 78%;
     padding-top: 2vh;
@@ -515,15 +551,52 @@ body {
         color: #878787; }
 
 @media screen and (max-width: 1512px) and (min-width: 375px) {
+  ::-webkit-scrollbar {
+    height: 2px; }
+  ::-webkit-scrollbar-track {
+    background-color: #FFFFFF; }
+  ::-webkit-scrollbar-thumb {
+    background-color: #101010; }
   .header {
     padding: 0; }
+    .header-burger {
+      background-color: rgba(16, 16, 16, 0);
+      display: block;
+      border: 1px solid #383838;
+      padding: 5px;
+      z-index: 2; }
     .header .Logo {
       font-family: 'Merriweather', sans-serif;
       font-size: 24px;
       font-weight: 700;
       line-height: 40px; }
     .header .nav {
-      display: none; }
+      display: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-100%);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      z-index: 1; }
+      .header .nav-list {
+        background-color: #101010;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0; }
+        .header .nav-list-item__link {
+          font-family: 'Inter', sans-serif;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px; }
+    .header .nav.open {
+      display: block;
+      transform: translateY(0);
+      opacity: 1; }
     .header .buttons {
       display: none; }
   .section1 {
@@ -577,27 +650,35 @@ body {
       line-height: 26px;
       text-align: center; }
     .section1-trend-slider {
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+      scroll-padding: 30px;
       width: 100%;
       display: flex;
       flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 0.1vw; }
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 5vw; }
       .section1-trend-slider-card1 {
-        display: none; }
+        flex: 0 0 80%;
+        scroll-snap-align: start; }
         .section1-trend-slider-card1__text {
           font-family: 'Inter', sans-serif;
           font-size: 18px;
           font-weight: 600;
           line-height: 26px; }
       .section1-trend-slider-card2 {
-        display: none; }
+        flex: 0 0 80%;
+        scroll-snap-align: start; }
       .section1-trend-slider-card3 {
-        width: 80%; }
+        flex: 0 0 80%;
+        scroll-snap-align: start; }
       .section1-trend-slider-card4 {
-        display: none; }
+        flex: 0 0 80%;
+        scroll-snap-align: start; }
       .section1-trend-slider-card5 {
-        display: none; }
+        flex: 0 0 80%;
+        scroll-snap-align: start; }
   .main .section2 {
     padding-top: 45px; }
     .main .section2__title {
@@ -769,20 +850,17 @@ body {
       gap: 4vw;
       flex-wrap: wrap; }
       .footer-container2-list {
-        padding-right: 105px;
+        padding-right: 45px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         gap: 3vw; }
-      .footer-container2-text2 {
-        margin-top: -100px;
-        margin-left: 180px; }
-        .footer-container2-text2__title {
-          font-family: 'Inter', sans-serif;
-          font-size: 14px;
-          font-weight: 600;
-          line-height: 20px; }
+      .footer-container2-text2__title {
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px; }
     .footer-under {
       width: 90%;
       display: flex;

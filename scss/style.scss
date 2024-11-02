@@ -37,7 +37,34 @@ body{
   background-size: cover;
   background-position: center;
 }
-
+.baner1{
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/baner1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.baner2{
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/baner2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.baner3{
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/baner3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.baner4{
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/baner4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
 
   .baner {
     background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/Hero Section.png");
@@ -55,7 +82,9 @@ body{
         @include Merriweather(1.667vw, 700, 3.704vh);
         color: $main-color;
       }
-
+      &-burger{
+        display: none;
+      }
       .nav {
         &-list {
           @include Flex(row, center, center, 1.5vw);
@@ -360,45 +389,47 @@ body{
     }
   }
 }
+
 .footer{
   @include Flex(column,center,center,6vh);
   padding-top: 7vh;
-  &-container1 {
-    @include Flex(row, center, space-around, 3vw);
+    &-container1 {
+      @include Flex(row, center, space-around, 3vw);
 
-    .Logo {
-      @include Merriweather(1.667vw, 700, 3.704vh);
-      color: $main-color;
-    }
-
-    &-texts {
-      width: 20%;
-
-      &__text {
-        color: $nav-color;
+      .Logo {
+        @include Merriweather(1.667vw, 700, 3.704vh);
+        color: $main-color;
       }
-    }
-  }
-  &-container2{
-    &-list{
-      @include Flex(column,flex-start,center,1vh);
-      &-item{
-        &__link{
-          color:$main-color;
+
+      &-texts {
+        width: 20%;
+
+        &__text {
+          color: $nav-color;
         }
       }
     }
-    &-text2{
-      @include Flex(column,flex-start,center,1vh);
-      &__title{
-        @include Inter(0.9vw,600,2.1vh);
-        color: $main-color;
+    &-container2{
+      @include Flex(row, center, center, 3vw);
+      &-list{
+        @include Flex(column,flex-start,center,1vh);
+        &-item{
+          &__link{
+            color:$main-color;
+          }
+        }
       }
-      &-image{
-        @include Flex(row,center,center,0.5vw);
+      &-text2{
+        @include Flex(column,flex-start,center,1vh);
+        &__title{
+          @include Inter(0.9vw,600,2.1vh);
+          color: $main-color;
+        }
+        &-image{
+          @include Flex(row,center,center,0.5vw);
+        }
       }
     }
-  }
 
   &-under{
     width: 78%;
@@ -427,14 +458,56 @@ body{
 
 
 @media screen and (max-width: 1512px) and (min-width: 375px) {
+  ::-webkit-scrollbar{
+    height: 2px;
+  }
+  ::-webkit-scrollbar-track{
+background-color: #FFFFFF;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #101010;
+  }
   .header{
     padding: 0;
+    &-burger{
+      background-color: rgba(16, 16, 16, 0);
+      display: block;
+      border: 1px solid $border-color;
+      padding: 5px;
+      z-index: 2;
+    }
+
+
     .Logo{
       @include Merriweather(24px,700,40px);
     }
     .nav{
       display: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-100%);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      z-index: 1;
+      &-list{
+        background-color: $background-color;
+        @include Flex(column,center,center,0);
+        &-item{
+          &__link{
+            @include Inter(16px,600,24px);
+          }
+        }
+      }
     }
+    .nav.open{
+      display: block;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
     .buttons{
       display: none;
     }
@@ -476,25 +549,29 @@ body{
         text-align: center;
       }
     &-slider{
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+      scroll-padding: 30px;
       width: 100%;
-      @include Flex(row,center,center,0.1vw);
+      @include Flex(row,flex-start,flex-start,5vw);
       &-card1{
-        display: none;
+        flex: 0 0 80%;
+        scroll-snap-align: start;
         &__text{
           @include Inter(18px, 600, 26px);
         }
       }
-      &-card2{
-        display: none;
+      &-card2{flex: 0 0 80%;
+        scroll-snap-align: start;
       }
-      &-card3{
-        width: 80%;
+      &-card3{flex: 0 0 80%;
+        scroll-snap-align: start;
       }
-      &-card4{
-        display: none;
+      &-card4{flex: 0 0 80%;
+        scroll-snap-align: start;
       }
-      &-card5{
-        display: none;
+      &-card5{flex: 0 0 80%;
+        scroll-snap-align: start;
       }
     }
     }
@@ -669,12 +746,10 @@ padding-left: 15px;
       @include Flex(row, flex-start, flex-start, 4vw);
       flex-wrap: wrap;
       &-list{
-        padding-right: 105px;
+        padding-right: 45px;
         @include Flex(column, flex-start, flex-start, 3vw);
       }
       &-text2{
-        margin-top: -100px;
-        margin-left: 180px;
         &__title{
           @include Inter(14px, 600, 20px);
         }
