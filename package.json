@@ -2,6 +2,9 @@
   "scripts": {
     "sass": "node-sass -w ../mostream/scss/style.scss css/style.css"
   },
+  "scripts": {
+    "sass": "node-sass -w ../mostream/scss/register.scss css/register.css"
+  },
   "devDependencies": {
     "node-sass": "^9.0.0"
   }

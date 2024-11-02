@@ -402,8 +402,11 @@ body{
 .footer{
   @include Flex(column,center,center,6vh);
   padding-top: 7vh;
+  &-block {
+    width: 100%;
+    @include Flex(row, flex-start, flex-start, 0);
     &-container1 {
-      @include Flex(row, center, space-around, 3vw);
+      @include Flex(row, flex-start, space-around, 3vw);
 
       .Logo {
         @include Merriweather(1.667vw, 700, 3.704vh);
@@ -418,28 +421,34 @@ body{
         }
       }
     }
-    &-container2{
+
+    &-container2 {
       @include Flex(row, center, center, 3vw);
-      &-list{
-        @include Flex(column,flex-start,center,1vh);
-        &-item{
-          &__link{
-            color:$main-color;
+
+      &-list {
+        @include Flex(column, flex-start, center, 1vh);
+
+        &-item {
+          &__link {
+            color: $main-color;
           }
         }
       }
-      &-text2{
-        @include Flex(column,flex-start,center,1vh);
-        &__title{
-          @include Inter(0.9vw,600,2.1vh);
+
+      &-text2 {
+        @include Flex(column, flex-start, center, 1vh);
+
+        &__title {
+          @include Inter(0.9vw, 600, 2.1vh);
           color: $main-color;
         }
-        &-image{
-          @include Flex(row,center,center,0.5vw);
+
+        &-image {
+          @include Flex(row, center, center, 0.5vw);
         }
       }
     }
-
+  }
   &-under{
     width: 78%;
     padding-top: 2vh;
@@ -740,30 +749,37 @@ body{
   .footer{
 padding-left: 15px;
     @include Flex(column, flex-start, flex-start, 3vw);
-    &-container1 {
-      &-texts {
-        width: 99%;
+    &-block {
+      @include Flex(column, flex-start, flex-start, 3vw);
+      &-container1 {
+        &-texts {
+          width: 99%;
 
-        .Logo {
-          @include Merriweather(48px, 700, 40px);
-        }
-      }
-    }
-    &-container2{
-      @include Flex(row, flex-start, flex-start, 4vw);
-      flex-wrap: wrap;
-      &-list{
-        padding-right: 55px;
-        @include Flex(column, flex-start, flex-start, 3vw);
-        &-item{
-          &__link{
-            @include Inter(20px, 600, 20px);
+          .Logo {
+            @include Merriweather(48px, 700, 40px);
           }
         }
       }
-      &-text2{
-        &__title{
-          @include Inter(28px, 600, 20px);
+
+      &-container2 {
+        @include Flex(row, flex-start, flex-start, 4vw);
+        flex-wrap: wrap;
+
+        &-list {
+          padding-right: 55px;
+          @include Flex(column, flex-start, flex-start, 3vw);
+
+          &-item {
+            &__link {
+              @include Inter(20px, 600, 20px);
+            }
+          }
+        }
+
+        &-text2 {
+          &__title {
+            @include Inter(28px, 600, 20px);
+          }
         }
       }
     }
@@ -783,6 +799,4 @@ padding-left: 15px;
       }
     }
   }
-
-
 }
