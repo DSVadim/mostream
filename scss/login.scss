@@ -93,6 +93,7 @@ body{
 @media screen and (max-width: 1512px) and (min-width: 375px) {
   body {
     @include Flex(column, center, flex-start, 0);
+    overflow-y: hidden;
   }
   .section1 {
     @include Flex(column, center, flex-start, 15px);
