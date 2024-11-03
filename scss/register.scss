@@ -93,6 +93,7 @@ body{
       @include Merriweather(48px, 700, 40px);
     }
     &-texts{
+      padding: 15px 50px;
       &__title{
         @include Inter(48px,600,32px);
       }
@@ -102,6 +103,9 @@ body{
     }
     &-form{
       width: 90%;
+      &__title{
+        @include Inter(48px, 600,54px);
+      }
       &__input{
         padding: 20px 0;
         @include Inter(36px,500,20px);

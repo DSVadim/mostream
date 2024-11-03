@@ -5,6 +5,9 @@
   "scripts": {
     "sass": "node-sass -w ../mostream/scss/register.scss css/register.css"
   },
+  "scripts": {
+    "sass": "node-sass -w ../mostream/scss/login.scss css/login.css"
+  },
   "devDependencies": {
     "node-sass": "^9.0.0"
   }
