@@ -201,10 +201,11 @@ body {
           line-height: 2.963vh;
           color: #FFFFFF;
           width: 100%;
-          height: 100%;
+          height: 96%;
           padding-bottom: 1vh;
           backdrop-filter: brightness(50%); }
         .section1-trend-slider-card1 .section1-trend-slider-card1__text.light {
+          border: 1px solid #FFFFFF;
           backdrop-filter: brightness(100%); }
       .section1-trend-slider-card2 {
         height: 23.148vh;
@@ -229,10 +230,11 @@ body {
           line-height: 2.963vh;
           color: #FFFFFF;
           width: 100%;
-          height: 100%;
+          height: 96%;
           padding-bottom: 1vh;
           backdrop-filter: brightness(50%); }
         .section1-trend-slider-card2 .section1-trend-slider-card2__text.light {
+          border: 1px solid #FFFFFF;
           backdrop-filter: brightness(100%); }
       .section1-trend-slider-card3 {
         height: 23.148vh;
@@ -257,10 +259,11 @@ body {
           line-height: 2.963vh;
           color: #FFFFFF;
           width: 100%;
-          height: 100%;
+          height: 96%;
           padding-bottom: 1vh;
           backdrop-filter: brightness(50%); }
         .section1-trend-slider-card3 .section1-trend-slider-card3__text.light {
+          border: 1px solid #FFFFFF;
           backdrop-filter: brightness(100%); }
       .section1-trend-slider-card4 {
         height: 23.148vh;
@@ -285,10 +288,11 @@ body {
           line-height: 2.963vh;
           color: #FFFFFF;
           width: 100%;
-          height: 100%;
+          height: 96%;
           padding-bottom: 1vh;
           backdrop-filter: brightness(50%); }
         .section1-trend-slider-card4 .section1-trend-slider-card4__text.light {
+          border: 1px solid #FFFFFF;
           backdrop-filter: brightness(100%); }
       .section1-trend-slider-card5 {
         height: 23.148vh;
@@ -313,10 +317,11 @@ body {
           line-height: 2.963vh;
           color: #FFFFFF;
           width: 100%;
-          height: 100%;
+          height: 96%;
           padding-bottom: 1vh;
           backdrop-filter: brightness(50%); }
         .section1-trend-slider-card5 .section1-trend-slider-card5__text.light {
+          border: 1px solid #FFFFFF;
           backdrop-filter: brightness(100%); }
 
 .section2 {

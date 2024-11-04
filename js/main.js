@@ -3,6 +3,13 @@ addEventListener('click',function () {
     const menu = document.querySelector('.nav');
     menu.classList.toggle('open');
 });
+document.querySelectorAll('.section5-list-item__img').forEach(img => {
+    img.addEventListener('click', function () {
+        const text = this.previousElementSibling.querySelector('.section5-list-item-texts__text');
+        text.classList.toggle('open');
+        this.classList.toggle('minus');
+    });
+});
 function changeBannerClass(newClass) {
         const banners = document.querySelectorAll('.baner, .baner1, .baner2, .baner3, .baner4');
 
@@ -11,13 +18,6 @@ function changeBannerClass(newClass) {
                 banner.classList.add(newClass);
         });
 }
-document.querySelectorAll('.section5-list-item__img').forEach(img => {
-    img.addEventListener('click', function () {
-        const text = this.previousElementSibling.querySelector('.section5-list-item-texts__text');
-        text.classList.toggle('open');
-        this.classList.toggle('minus');
-    });
-});
 function toggleLightCard(activeCardSelector, bannerClass) {
         const cards = document.querySelectorAll('.section1-trend-slider-card1__text, .section1-trend-slider-card2__text, .section1-trend-slider-card3__text, .section1-trend-slider-card4__text, .section1-trend-slider-card5__text');
 
