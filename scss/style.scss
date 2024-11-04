@@ -64,6 +64,8 @@ body{
   overflow: hidden;
 }
 
+
+
 .baner {
   background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.9)), url("../img/Hero Section.png");
   background-repeat: no-repeat;
@@ -546,15 +548,27 @@ body{
     height: 0;
   }
   .header{
+    @include Flex(column,center,center,0);
     padding-top: 20px;
     &-burger{
       background-color: rgba(16, 16, 16, 0);
       display: block;
       border: 1px solid $border-color;
       padding: 25px;
+      &__img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    &-burger__img.krest{
+      content: url("../img/krest.svg");
+      width: 35px;
+      height: 35px;
     }
 
-
+.media{
+  @include Flex(row,center,space-around,350px);
+}
     .Logo{
       @include Merriweather(48px,700,40px);
     }
@@ -579,6 +593,7 @@ body{
       }
     }
     .nav.open{
+      background-color: rgba(16, 16, 16, 0.23);
       display: block;
       transform: translateY(0);
       opacity: 1;
@@ -586,7 +601,28 @@ body{
     }
 
     .buttons{
+      width: 100%;
       display: none;
+      &-svg{
+        display: none;
+      }
+      &__btn1{
+        @include Inter(32px,600,24px);
+        width: 40%;
+      }
+      &__btn2{
+        @include Inter(32px,600,24px);
+        width: 40%;
+      }
+    }
+    .buttons.open{
+      background-color: rgba(16, 16, 16, 0.23);
+      display: flex;
+      flex-direction: column;
+      transform: translateY(0);
+      opacity: 1;
+      z-index: 2;
+      padding-bottom: 50px;
     }
   }
   .section1 {
@@ -596,12 +632,12 @@ body{
 
     &__title {
       width: 80%;
-      @include Inter(24px, 600, 32px);
+      @include Inter(48px, 600, 42px);
     }
 
     &__text {
       width: 80%;
-      @include Inter(14px, 500, 20px);
+      @include Inter(28px, 500, 30px);
     }
 
     &-buttons {
@@ -640,24 +676,41 @@ body{
         overflow-y: hidden;
         scroll-snap-align: center;
         &__text{
+          height: 100%;
           @include Inter(36px, 600, 26px);
         }
       }
       &-card2{flex: 0 0 80%;
         overflow-y: hidden;
         scroll-snap-align: center;
+        &__text{
+          height: 100%;
+          @include Inter(36px, 600, 26px);
+        }
       }
       &-card3{flex: 0 0 80%;
         overflow-y: hidden;
         scroll-snap-align: center;
+        &__text{
+          height: 100%;
+          @include Inter(36px, 600, 26px);
+        }
       }
       &-card4{flex: 0 0 80%;
         overflow-y: hidden;
         scroll-snap-align: center;
+        &__text{
+          height: 100%;
+          @include Inter(36px, 600, 26px);
+        }
       }
       &-card5{flex: 0 0 80%;
         overflow-y: hidden;
         scroll-snap-align: center;
+        &__text{
+          height: 100%;
+          @include Inter(36px, 600, 26px);
+        }
       }
     }
     }
@@ -871,4 +924,18 @@ padding-left: 15px;
       }
     }
   }
+}
+
+.updated-style {
+  width: 80%;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 52px;
+}
+
+.updated-text {
+  width: 80%;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 30px;
 }

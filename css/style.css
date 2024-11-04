@@ -640,12 +640,30 @@ body {
   ::-webkit-scrollbar {
     height: 0; }
   .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
     padding-top: 20px; }
     .header-burger {
       background-color: rgba(16, 16, 16, 0);
       display: block;
       border: 1px solid #383838;
       padding: 25px; }
+      .header-burger__img {
+        width: 35px;
+        height: 35px; }
+    .header-burger__img.krest {
+      content: url("../img/krest.svg");
+      width: 35px;
+      height: 35px; }
+    .header .media {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      gap: 350px; }
     .header .Logo {
       font-family: 'Merriweather', sans-serif;
       font-size: 48px;
@@ -675,12 +693,36 @@ body {
             font-weight: 600;
             line-height: 24px; }
     .header .nav.open {
+      background-color: rgba(16, 16, 16, 0.23);
       display: block;
       transform: translateY(0);
       opacity: 1;
       z-index: 2; }
     .header .buttons {
+      width: 100%;
       display: none; }
+      .header .buttons-svg {
+        display: none; }
+      .header .buttons__btn1 {
+        font-family: 'Inter', sans-serif;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 24px;
+        width: 40%; }
+      .header .buttons__btn2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 24px;
+        width: 40%; }
+    .header .buttons.open {
+      background-color: rgba(16, 16, 16, 0.23);
+      display: flex;
+      flex-direction: column;
+      transform: translateY(0);
+      opacity: 1;
+      z-index: 2;
+      padding-bottom: 50px; }
   .section1 {
     padding: 50px 20px;
     width: 100%;
@@ -692,15 +734,15 @@ body {
     .section1__title {
       width: 80%;
       font-family: 'Inter', sans-serif;
-      font-size: 24px;
+      font-size: 48px;
       font-weight: 600;
-      line-height: 32px; }
+      line-height: 42px; }
     .section1__text {
       width: 80%;
       font-family: 'Inter', sans-serif;
-      font-size: 14px;
+      font-size: 28px;
       font-weight: 500;
-      line-height: 20px; }
+      line-height: 30px; }
     .section1-buttons {
       width: 80%;
       padding-top: 2vh;
@@ -750,6 +792,7 @@ body {
         overflow-y: hidden;
         scroll-snap-align: center; }
         .section1-trend-slider-card1__text {
+          height: 100%;
           font-family: 'Inter', sans-serif;
           font-size: 36px;
           font-weight: 600;
@@ -758,18 +801,42 @@ body {
         flex: 0 0 80%;
         overflow-y: hidden;
         scroll-snap-align: center; }
+        .section1-trend-slider-card2__text {
+          height: 100%;
+          font-family: 'Inter', sans-serif;
+          font-size: 36px;
+          font-weight: 600;
+          line-height: 26px; }
       .section1-trend-slider-card3 {
         flex: 0 0 80%;
         overflow-y: hidden;
         scroll-snap-align: center; }
+        .section1-trend-slider-card3__text {
+          height: 100%;
+          font-family: 'Inter', sans-serif;
+          font-size: 36px;
+          font-weight: 600;
+          line-height: 26px; }
       .section1-trend-slider-card4 {
         flex: 0 0 80%;
         overflow-y: hidden;
         scroll-snap-align: center; }
+        .section1-trend-slider-card4__text {
+          height: 100%;
+          font-family: 'Inter', sans-serif;
+          font-size: 36px;
+          font-weight: 600;
+          line-height: 26px; }
       .section1-trend-slider-card5 {
         flex: 0 0 80%;
         overflow-y: hidden;
         scroll-snap-align: center; }
+        .section1-trend-slider-card5__text {
+          height: 100%;
+          font-family: 'Inter', sans-serif;
+          font-size: 36px;
+          font-weight: 600;
+          line-height: 26px; }
   .main .section2 {
     padding-top: 45px; }
     .main .section2__title {
@@ -1002,3 +1069,15 @@ body {
           font-size: 28px;
           font-weight: 500;
           line-height: 20px; } }
+
+.updated-style {
+  width: 80%;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 52px; }
+
+.updated-text {
+  width: 80%;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 30px; }
