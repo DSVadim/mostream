@@ -1,7 +1,5 @@
 @import "_vars";
 @import "_mixin";
-@import "_reset";
-
 *{
   padding: 0;
   margin: 0;
@@ -66,14 +64,15 @@ body{
   overflow: hidden;
 }
 
-  .baner {
-    background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/Hero Section.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    }
-    .header {
+.baner {
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.9)), url("../img/Hero Section.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.header {
       backdrop-filter: brightness(90%);
       padding-top: 2.5vh;
       @include Flex(row, center, space-around, 2.083vw);
@@ -176,7 +175,6 @@ body{
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-
             &__text {
               display: flex;
               text-align: center;
@@ -189,6 +187,9 @@ body{
               padding-bottom: 1vh;
               backdrop-filter: brightness(50%);
             }
+            .section1-trend-slider-card1__text.light{
+              backdrop-filter: brightness(100%);
+            }
           }
 
           &-card2 {
@@ -199,6 +200,21 @@ body{
             background-repeat: no-repeat;
             background-size: cover;
             @include Flex(row, flex-end, center, 0);
+            &__text {
+              display: flex;
+              text-align: center;
+              justify-content: center;
+              align-items: flex-end;
+              @include Inter(1.2vw, 700, 2.963vh);
+              color: $main-color;
+              width: 100%;
+              height: 100%;
+              padding-bottom: 1vh;
+              backdrop-filter: brightness(50%);
+            }
+            .section1-trend-slider-card2__text.light{
+              backdrop-filter: brightness(100%);
+            }
           }
 
           &-card3 {
@@ -209,6 +225,21 @@ body{
             background-repeat: no-repeat;
             background-size: cover;
             @include Flex(row, flex-end, center, 0);
+            &__text {
+              display: flex;
+              text-align: center;
+              justify-content: center;
+              align-items: flex-end;
+              @include Inter(1.2vw, 700, 2.963vh);
+              color: $main-color;
+              width: 100%;
+              height: 100%;
+              padding-bottom: 1vh;
+              backdrop-filter: brightness(50%);
+            }
+            .section1-trend-slider-card3__text.light{
+              backdrop-filter: brightness(100%);
+            }
           }
           &-card4 {
             height: 23.148vh;
@@ -218,6 +249,21 @@ body{
             background-repeat: no-repeat;
             background-size: cover;
             @include Flex(row, flex-end, center, 0);
+            &__text {
+              display: flex;
+              text-align: center;
+              justify-content: center;
+              align-items: flex-end;
+              @include Inter(1.2vw, 700, 2.963vh);
+              color: $main-color;
+              width: 100%;
+              height: 100%;
+              padding-bottom: 1vh;
+              backdrop-filter: brightness(50%);
+            }
+            .section1-trend-slider-card4__text.light{
+              backdrop-filter: brightness(100%);
+            }
           }
           &-card5 {
             height: 23.148vh;
@@ -227,6 +273,21 @@ body{
             background-repeat: no-repeat;
             background-size: cover;
             @include Flex(row, flex-end, center, 0);
+            &__text {
+              display: flex;
+              text-align: center;
+              justify-content: center;
+              align-items: flex-end;
+              @include Inter(1.2vw, 700, 2.963vh);
+              color: $main-color;
+              width: 100%;
+              height: 100%;
+              padding-bottom: 1vh;
+              backdrop-filter: brightness(50%);
+            }
+            .section1-trend-slider-card5__text.light{
+              backdrop-filter: brightness(100%);
+            }
           }
         }
       }
@@ -571,22 +632,27 @@ body{
       @include Flex(row,flex-start,flex-start,5vw);
       &-card1{
         flex: 0 0 80%;
-        scroll-snap-align: start;
+        overflow-y: hidden;
+        scroll-snap-align: center;
         &__text{
           @include Inter(36px, 600, 26px);
         }
       }
       &-card2{flex: 0 0 80%;
-        scroll-snap-align: start;
+        overflow-y: hidden;
+        scroll-snap-align: center;
       }
       &-card3{flex: 0 0 80%;
-        scroll-snap-align: start;
+        overflow-y: hidden;
+        scroll-snap-align: center;
       }
       &-card4{flex: 0 0 80%;
-        scroll-snap-align: start;
+        overflow-y: hidden;
+        scroll-snap-align: center;
       }
       &-card5{flex: 0 0 80%;
-        scroll-snap-align: start;
+        overflow-y: hidden;
+        scroll-snap-align: center;
       }
     }
     }

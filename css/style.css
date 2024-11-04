@@ -204,6 +204,8 @@ body {
           height: 100%;
           padding-bottom: 1vh;
           backdrop-filter: brightness(50%); }
+        .section1-trend-slider-card1 .section1-trend-slider-card1__text.light {
+          backdrop-filter: brightness(100%); }
       .section1-trend-slider-card2 {
         height: 23.148vh;
         width: 14.896vw;
@@ -216,6 +218,22 @@ body {
         align-items: flex-end;
         justify-content: center;
         gap: 0; }
+        .section1-trend-slider-card2__text {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: flex-end;
+          font-family: 'Inter', sans-serif;
+          font-size: 1.2vw;
+          font-weight: 700;
+          line-height: 2.963vh;
+          color: #FFFFFF;
+          width: 100%;
+          height: 100%;
+          padding-bottom: 1vh;
+          backdrop-filter: brightness(50%); }
+        .section1-trend-slider-card2 .section1-trend-slider-card2__text.light {
+          backdrop-filter: brightness(100%); }
       .section1-trend-slider-card3 {
         height: 23.148vh;
         width: 14.896vw;
@@ -228,6 +246,22 @@ body {
         align-items: flex-end;
         justify-content: center;
         gap: 0; }
+        .section1-trend-slider-card3__text {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: flex-end;
+          font-family: 'Inter', sans-serif;
+          font-size: 1.2vw;
+          font-weight: 700;
+          line-height: 2.963vh;
+          color: #FFFFFF;
+          width: 100%;
+          height: 100%;
+          padding-bottom: 1vh;
+          backdrop-filter: brightness(50%); }
+        .section1-trend-slider-card3 .section1-trend-slider-card3__text.light {
+          backdrop-filter: brightness(100%); }
       .section1-trend-slider-card4 {
         height: 23.148vh;
         width: 14.896vw;
@@ -240,6 +274,22 @@ body {
         align-items: flex-end;
         justify-content: center;
         gap: 0; }
+        .section1-trend-slider-card4__text {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: flex-end;
+          font-family: 'Inter', sans-serif;
+          font-size: 1.2vw;
+          font-weight: 700;
+          line-height: 2.963vh;
+          color: #FFFFFF;
+          width: 100%;
+          height: 100%;
+          padding-bottom: 1vh;
+          backdrop-filter: brightness(50%); }
+        .section1-trend-slider-card4 .section1-trend-slider-card4__text.light {
+          backdrop-filter: brightness(100%); }
       .section1-trend-slider-card5 {
         height: 23.148vh;
         width: 14.896vw;
@@ -252,6 +302,22 @@ body {
         align-items: flex-end;
         justify-content: center;
         gap: 0; }
+        .section1-trend-slider-card5__text {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: flex-end;
+          font-family: 'Inter', sans-serif;
+          font-size: 1.2vw;
+          font-weight: 700;
+          line-height: 2.963vh;
+          color: #FFFFFF;
+          width: 100%;
+          height: 100%;
+          padding-bottom: 1vh;
+          backdrop-filter: brightness(50%); }
+        .section1-trend-slider-card5 .section1-trend-slider-card5__text.light {
+          backdrop-filter: brightness(100%); }
 
 .section2 {
   padding: 10vh 0;
@@ -666,6 +732,7 @@ body {
     .section1-trend-slider {
       scroll-snap-type: x mandatory;
       overflow-x: scroll;
+      overflow-y: hidden;
       scroll-padding-left: 100px;
       width: 100%;
       display: flex;
@@ -675,7 +742,8 @@ body {
       gap: 5vw; }
       .section1-trend-slider-card1 {
         flex: 0 0 80%;
-        scroll-snap-align: start; }
+        overflow-y: hidden;
+        scroll-snap-align: center; }
         .section1-trend-slider-card1__text {
           font-family: 'Inter', sans-serif;
           font-size: 36px;
@@ -683,16 +751,20 @@ body {
           line-height: 26px; }
       .section1-trend-slider-card2 {
         flex: 0 0 80%;
-        scroll-snap-align: start; }
+        overflow-y: hidden;
+        scroll-snap-align: center; }
       .section1-trend-slider-card3 {
         flex: 0 0 80%;
-        scroll-snap-align: start; }
+        overflow-y: hidden;
+        scroll-snap-align: center; }
       .section1-trend-slider-card4 {
         flex: 0 0 80%;
-        scroll-snap-align: start; }
+        overflow-y: hidden;
+        scroll-snap-align: center; }
       .section1-trend-slider-card5 {
         flex: 0 0 80%;
-        scroll-snap-align: start; }
+        overflow-y: hidden;
+        scroll-snap-align: center; }
   .main .section2 {
     padding-top: 45px; }
     .main .section2__title {
