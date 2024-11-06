@@ -1,3 +1,8 @@
+document.body.onload = function (){
+    toggleLightCard('.section1-trend-slider-card3__text', 'baner');
+    Url('https://www.youtube.com/watch?v=PDxtjIFfB1M');
+    UrlMore('https://planetakino.ua/movies/elio/#today')
+}
 document.querySelector('.header-burger__img')
     .addEventListener('click', function () {
             const menuItems = document.querySelectorAll('.nav, .buttons');
@@ -36,6 +41,43 @@ function toggleLightCard(activeCardSelector, bannerClass) {
         changeBannerClass(bannerClass);
 }
 
+function Url(url) {
+    document.querySelectorAll('.section1-buttons__btn1').forEach(button => {
+        button.addEventListener('click', () => {
+            window.location.href = url;
+        });
+    })
+}
+function UrlMore(url) {
+    document.querySelectorAll('.section1-buttons__btn2').forEach(button => {
+        button.addEventListener('click', () => {
+            window.location.href = url;
+        });
+    })
+}
+function filterCards(selectedCategory) {
+    const cards = document.querySelectorAll('.section2-listcatalog-card, .section2-listcatalog-card2, .section2-listcatalog-card3, .section2-listcatalog-card4');
+
+    cards.forEach(card => {
+        const cardCategories = card.getAttribute('data-category').split(',').map(category => category.trim());
+
+        const matches = selectedCategory === 'all' || cardCategories.includes(selectedCategory);
+
+        card.style.display = matches ? 'block' : 'none';
+        card.style.alignContent = 'flex-end';
+    });
+    const titles = document.querySelectorAll('.section2-listcatalog-card__title');
+    const texts = document.querySelectorAll('.section2-listcatalog-card__text');
+    titles.forEach(title=>{
+        title.style.alignSelf = 'flex-start';
+    })
+    texts.forEach(text=>{
+        text.style.alignSelf = 'flex-end';
+        text.style.overflowY = 'hidden';
+    })
+}
+
+
 document.querySelector('.section1-trend-slider-card1')
     .addEventListener('click', function () {
             const titles = document.querySelectorAll('.section1__title');
@@ -52,6 +94,9 @@ document.querySelector('.section1-trend-slider-card1')
             });
 
             toggleLightCard('.section1-trend-slider-card1__text', 'baner2');
+            Url('https://www.youtube.com/watch?v=q2rlaaRvKEo');
+            UrlMore('https://planetakino.ua/movies/arctic-justice/#today');
+
     });
 
 document.querySelector('.section1-trend-slider-card2')
@@ -68,6 +113,8 @@ document.querySelector('.section1-trend-slider-card2')
                     text.classList.add('updated-text');
             })
             toggleLightCard('.section1-trend-slider-card2__text', 'baner1');
+            Url('https://www.youtube.com/watch?v=O8WVLkr49CU');
+            UrlMore('https://planetakino.ua/movies/the-garfield-movie/#today');
     });
 
 document.querySelector('.section1-trend-slider-card3')
@@ -85,6 +132,8 @@ document.querySelector('.section1-trend-slider-card3')
             })
 
             toggleLightCard('.section1-trend-slider-card3__text', 'baner');
+            Url('https://www.youtube.com/watch?v=PDxtjIFfB1M');
+            UrlMore('https://planetakino.ua/movies/elio/#today')
     });
 
 document.querySelector('.section1-trend-slider-card4')
@@ -102,6 +151,8 @@ document.querySelector('.section1-trend-slider-card4')
             })
 
             toggleLightCard('.section1-trend-slider-card4__text', 'baner3');
+            Url('https://www.youtube.com/watch?v=wIQE7rBdr1c');
+            UrlMore('https://planetakino.ua/movies/10-lives/#today');
     });
 
 document.querySelector('.section1-trend-slider-card5')
@@ -119,6 +170,19 @@ document.querySelector('.section1-trend-slider-card5')
             })
 
             toggleLightCard('.section1-trend-slider-card5__text', 'baner4');
+            Url('https://www.youtube.com/watch?v=7pZ_jQFnJ2g');
+            UrlMore('https://planetakino.ua/movies/despicable-me-4/#today');
     });
+document.querySelector('.buttons-svg__img')
+    .addEventListener('click', function () {
+        const searchInput = document.querySelector('.search');
 
+
+        if( searchInput.style.display ==='block'){
+            searchInput.style.display ='none';
+        }
+        else {
+            searchInput.style.display ='block';
+        }
+    });
 

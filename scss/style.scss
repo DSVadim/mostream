@@ -5,6 +5,12 @@
   margin: 0;
 
 }
+p{
+  cursor: default;
+}
+a{
+  cursor: pointer;
+}
 ul{
   list-style-type:none;
 }
@@ -17,6 +23,7 @@ body{
   background-color:$secondary-color;
   border-radius: 5px;
   border-color: $secondary-color;
+  cursor: pointer;
 }
 .button2{
   @include Inter(0.83vw,600,2.1vh);
@@ -24,6 +31,7 @@ body{
   background-color: $secondary-bg-color;
   border-radius: 5px;
   border-color: $secondary-color;
+  cursor: pointer;
 }
 .lscard{
   overflow: hidden;
@@ -73,7 +81,6 @@ body{
   background-position: center;
   overflow: hidden;
 }
-
 .header {
       backdrop-filter: brightness(90%);
       padding-top: 2.5vh;
@@ -82,6 +89,7 @@ body{
       .Logo {
         @include Merriweather(1.667vw, 700, 3.704vh);
         color: $main-color;
+        cursor: default;
       }
       &-burger{
         display: none;
@@ -92,11 +100,12 @@ body{
 
           &-item {
             &__link {
+              padding: 0.2vh 0.2vw;
               color: $nav-color;
               @include Inter(0.83vw, 600, 2.1vh);
+              cursor: pointer;
 
               &:hover {
-                padding: 0.2vh 0.2vw;
                 color: $main-color;
                 background-color: rgba(0, 0, 0, 0.3);
               }
@@ -108,7 +117,12 @@ body{
 
       .buttons {
         @include Flex(row, center, center, 0.8vw);
-
+        .search{
+          position: absolute;
+          right: 400px;
+          border-radius: 8px;
+          height: 30px;
+        }
         &-svg {
           border: 1px solid $border-color;
           border-radius: 5px;
@@ -333,7 +347,7 @@ body{
         flex-wrap: nowrap;
         overflow-x:hidden;
         &-card{
-          background-image:url("../img/lscard1.png");
+          background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)),url("../img/lscard1.png");
           &__title{
             backdrop-filter: brightness(90%);
             @include Inter(1.6vw,600,2.185vw);
@@ -347,13 +361,13 @@ body{
           }
         }
         &-card2{
-          background-image:url("../img/lscard2.png");
+          background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)),url("../img/lscard2.png");
         }
         &-card3{
-          background-image:url("../img/lscard3.png");
+          background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)),url("../img/lscard3.png");
         }
         &-card4{
-          background-image:url("../img/lscard4.png");
+          background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)),url("../img/lscard4.png");
         }
       }
     }
@@ -561,7 +575,7 @@ body{
       }
     }
     &-burger__img.krest{
-      content: url("../img/krest.svg");
+      content: url("../img/krest.png");
       width: 35px;
       height: 35px;
     }

@@ -2,6 +2,12 @@
   padding: 0;
   margin: 0; }
 
+p {
+  cursor: default; }
+
+a {
+  cursor: pointer; }
+
 ul {
   list-style-type: none; }
 
@@ -16,7 +22,8 @@ body {
   color: #FFFFFF;
   background-color: #F14141;
   border-radius: 5px;
-  border-color: #F14141; }
+  border-color: #F14141;
+  cursor: pointer; }
 
 .button2 {
   font-family: 'Inter', sans-serif;
@@ -26,7 +33,8 @@ body {
   color: #FFFFFF;
   background-color: #242323;
   border-radius: 5px;
-  border-color: #F14141; }
+  border-color: #F14141;
+  cursor: pointer; }
 
 .lscard {
   overflow: hidden;
@@ -90,7 +98,8 @@ body {
     font-size: 1.667vw;
     font-weight: 700;
     line-height: 3.704vh;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    cursor: default; }
   .header-burger {
     display: none; }
   .header .nav-list {
@@ -100,13 +109,14 @@ body {
     justify-content: center;
     gap: 1.5vw; }
     .header .nav-list-item__link {
+      padding: 0.2vh 0.2vw;
       color: #878787;
       font-family: 'Inter', sans-serif;
       font-size: 0.83vw;
       font-weight: 600;
-      line-height: 2.1vh; }
+      line-height: 2.1vh;
+      cursor: pointer; }
       .header .nav-list-item__link:hover {
-        padding: 0.2vh 0.2vw;
         color: #FFFFFF;
         background-color: rgba(0, 0, 0, 0.3); }
   .header .buttons {
@@ -115,6 +125,11 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.8vw; }
+    .header .buttons .search {
+      position: absolute;
+      right: 400px;
+      border-radius: 8px;
+      height: 30px; }
     .header .buttons-svg {
       border: 1px solid #383838;
       border-radius: 5px; }
@@ -372,7 +387,7 @@ body {
     flex-wrap: nowrap;
     overflow-x: hidden; }
     .section2-listcatalog-card {
-      background-image: url("../img/lscard1.png"); }
+      background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)), url("../img/lscard1.png"); }
       .section2-listcatalog-card__title {
         backdrop-filter: brightness(90%);
         font-family: 'Inter', sans-serif;
@@ -389,11 +404,11 @@ body {
         font-weight: 500;
         line-height: 2.407vh; }
     .section2-listcatalog-card2 {
-      background-image: url("../img/lscard2.png"); }
+      background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)), url("../img/lscard2.png"); }
     .section2-listcatalog-card3 {
-      background-image: url("../img/lscard3.png"); }
+      background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)), url("../img/lscard3.png"); }
     .section2-listcatalog-card4 {
-      background-image: url("../img/lscard4.png"); }
+      background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)), url("../img/lscard4.png"); }
 
 .section3 {
   display: flex;
@@ -655,7 +670,7 @@ body {
         width: 35px;
         height: 35px; }
     .header-burger__img.krest {
-      content: url("../img/krest.svg");
+      content: url("../img/krest.png");
       width: 35px;
       height: 35px; }
     .header .media {
