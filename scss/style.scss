@@ -104,6 +104,8 @@ body{
               color: $nav-color;
               @include Inter(0.83vw, 600, 2.1vh);
               cursor: pointer;
+              text-decoration: none;
+
 
               &:hover {
                 color: $main-color;

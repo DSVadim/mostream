@@ -1,0 +1,202 @@
+@import "style";
+*{
+  padding: 0;
+  margin: 0;
+}
+.header {
+  backdrop-filter: brightness(90%);
+  padding-top: 2.5vh;
+  @include Flex(row, center, space-around, 2.083vw);
+
+  .Logo {
+    @include Merriweather(1.667vw, 700, 3.704vh);
+    color: $main-color;
+    cursor: default;
+  }
+  &-burger{
+    display: none;
+  }
+  .nav {
+    &-list {
+      @include Flex(row, center, center, 1.5vw);
+
+      &-item {
+        &__link {
+          padding: 0.2vh 0.2vw;
+          color: $nav-color;
+          @include Inter(0.83vw, 600, 2.1vh);
+          cursor: pointer;
+          text-decoration: none;
+
+          &:hover {
+            color: $main-color;
+            background-color: rgba(0, 0, 0, 0.3);
+          }
+        }
+
+      }
+    }
+  }
+
+  .buttons {
+    @include Flex(row, center, center, 0.8vw);
+    .search{
+      position: absolute;
+      right: 400px;
+      border-radius: 8px;
+      height: 30px;
+    }
+    &-svg {
+      border: 1px solid $border-color;
+      border-radius: 5px;
+
+      &__img {
+        padding: 0.2vh 0.2vw;
+      }
+    }
+
+    &__btn1 {
+      padding: 0.5vh 0.4vw;
+    }
+
+    &__btn2 {
+      padding: 0.5vh 0.4vw;
+    }
+  }
+}
+.main {
+  overflow-x: hidden;
+  .section1 {
+    backdrop-filter: brightness(100%);
+    width: 45%;
+    padding: 15vh 30vw 10vh 30vw;
+    @include Flex(column, center, center, 5.963vh);
+
+    &__title {
+      @include Inter(2.1vw, 500, 5.185vh);
+      color: $main-color;
+      text-align: center;
+    }
+
+    &__text {
+      @include Inter(0.9vw, 500, 2.407vh);
+      color: rgba(154, 154, 154, 0.58);
+      text-align: center;
+    }
+
+    &-buttons {
+      @include Flex(row, center, center, 0.9vw);
+
+      &__btn1 {
+        @include Flex(row, center, center, 0.1vw);
+        padding: 0.8vh 0.5vw;
+      }
+
+      &__btn2 {
+        padding: 0.9vh 0.5vw;
+        border: 1px solid transparent;
+      }
+    }
+  }
+
+
+
+
+  .section3{
+    text-align: center;
+    padding: 15vh 0;
+    @include Flex(column,center,center,2vh);
+    background-image: url("../img/back.png");
+
+    &__title{
+      width: 45%;
+      @include Inter(2.4vw,600,5.185vh);
+      color:$main-color;
+    }
+    &__text{
+      width: 40%;
+      @include Inter(0.9vw,500,2.1vh);
+      color:$nav-color;
+    }
+    &-inputs{
+      @include Flex(row,center,center,0.5vw);
+      &__input{
+        background-color: $background-color;
+        padding: 1.5vh 6vw 1.5vh 0;
+        border-radius: 1px;
+      }
+      &__btn{
+        padding: 1.4vh 0.5vw;
+      }
+    }
+  }
+}
+.footer{
+  @include Flex(column,center,center,6vh);
+  padding-top: 7vh;
+  &-block {
+    width: 100%;
+    @include Flex(row, flex-start, flex-start, 0);
+    &-container1 {
+      @include Flex(row, flex-start, space-around, 3vw);
+
+      .Logo {
+        @include Merriweather(1.667vw, 700, 3.704vh);
+        color: $main-color;
+      }
+
+      &-texts {
+        width: 20%;
+
+        &__text {
+          color: $nav-color;
+        }
+      }
+    }
+
+    &-container2 {
+      @include Flex(row, center, center, 3vw);
+
+      &-list {
+        @include Flex(column, flex-start, center, 1vh);
+
+        &-item {
+          &__link {
+            color: $main-color;
+          }
+        }
+      }
+
+      &-text2 {
+        @include Flex(column, flex-start, center, 1vh);
+
+        &__title {
+          @include Inter(0.9vw, 600, 2.1vh);
+          color: $main-color;
+        }
+
+        &-image {
+          @include Flex(row, center, center, 0.5vw);
+        }
+      }
+    }
+  }
+  &-under{
+    width: 78%;
+    padding-top: 2vh;
+    @include Flex(row,center,space-between,0);
+    border-top: 1px solid $nav-color;
+    &__text{
+      @include Inter(0.9vw,500,2.1vh);
+      color:$nav-color;
+    }
+    &-under2{
+      padding:2vh 0;
+      @include Flex(row,center,space-between,0.4vw);
+      &__text{
+        @include Inter(0.9vw,500,2.1vh);
+        color:$nav-color;
+      }
+    }
+  }
+}
