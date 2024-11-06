@@ -347,7 +347,7 @@ body{
         flex-wrap: nowrap;
         overflow-x:hidden;
         &-card{
-          background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)),url("../img/lscard1.png");
+          background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0), rgba(16, 16, 16, 0.94)),url("../img/lscard1.png");
           &__title{
             backdrop-filter: brightness(90%);
             @include Inter(1.6vw,600,2.185vw);
@@ -361,13 +361,13 @@ body{
           }
         }
         &-card2{
-          background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)),url("../img/lscard2.png");
+          background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0), rgba(16, 16, 16, 0.94)),url("../img/lscard2.png");
         }
         &-card3{
-          background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)),url("../img/lscard3.png");
+          background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0), rgba(16, 16, 16, 0.94)),url("../img/lscard3.png");
         }
         &-card4{
-          background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)),url("../img/lscard4.png");
+          background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0), rgba(16, 16, 16, 0.94)),url("../img/lscard4.png");
         }
       }
     }

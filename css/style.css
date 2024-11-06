@@ -387,7 +387,7 @@ body {
     flex-wrap: nowrap;
     overflow-x: hidden; }
     .section2-listcatalog-card {
-      background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)), url("../img/lscard1.png"); }
+      background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0), rgba(16, 16, 16, 0.94)), url("../img/lscard1.png"); }
       .section2-listcatalog-card__title {
         backdrop-filter: brightness(90%);
         font-family: 'Inter', sans-serif;
@@ -404,11 +404,11 @@ body {
         font-weight: 500;
         line-height: 2.407vh; }
     .section2-listcatalog-card2 {
-      background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)), url("../img/lscard2.png"); }
+      background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0), rgba(16, 16, 16, 0.94)), url("../img/lscard2.png"); }
     .section2-listcatalog-card3 {
-      background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)), url("../img/lscard3.png"); }
+      background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0), rgba(16, 16, 16, 0.94)), url("../img/lscard3.png"); }
     .section2-listcatalog-card4 {
-      background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0.5), rgba(16, 16, 16, 0.9)), url("../img/lscard4.png"); }
+      background-image: linear-gradient(to bottom, rgba(74, 73, 73, 0), rgba(16, 16, 16, 0.94)), url("../img/lscard4.png"); }
 
 .section3 {
   display: flex;
