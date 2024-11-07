@@ -60,7 +60,7 @@ function filterCards(selectedCategory) {
     const cards = document.querySelectorAll('.section2-listcatalog-card, .section2-listcatalog-card2, .section2-listcatalog-card3, .section2-listcatalog-card4');
 
     cards.forEach(card => {
-        const cardCategories = card.getAttribute('data-category').split(',').map(category => category.trim());
+        const cardCategories = card.getAttribute('data-category').split(' , ').map(category => category.trim());
 
         const matches = selectedCategory === 'all' || cardCategories.includes(selectedCategory);
 
