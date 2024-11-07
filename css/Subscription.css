@@ -45,7 +45,10 @@ body {
   width: 45%;
   border: 1px solid #242323;
   padding: 15px;
-  border-radius: 8px; }
+  border-radius: 8px;
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .header {
   backdrop-filter: brightness(90%);
@@ -183,6 +186,8 @@ body {
             font-weight: 600;
             line-height: 24px;
             color: #FFFFFF; }
+          .main .section1-container2-block1-card1-label__img.red {
+            content: url("../img/tick-circle-red.svg"); }
         .main .section1-container2-block1-card1__price {
           font-family: 'Inter', sans-serif;
           font-size: 40px;
@@ -213,6 +218,8 @@ body {
             font-weight: 600;
             line-height: 24px;
             color: #FFFFFF; }
+          .main .section1-container2-block1-card2-label__img.red {
+            content: url("../img/tick-circle-red.svg"); }
         .main .section1-container2-block1-card2__price {
           font-family: 'Inter', sans-serif;
           font-size: 40px;
@@ -250,6 +257,8 @@ body {
             font-weight: 600;
             line-height: 24px;
             color: #FFFFFF; }
+          .main .section1-container2-block2-card1-label__img.red {
+            content: url("../img/tick-circle-red.svg"); }
         .main .section1-container2-block2-card1__price {
           font-family: 'Inter', sans-serif;
           font-size: 40px;
@@ -280,6 +289,8 @@ body {
             font-weight: 600;
             line-height: 24px;
             color: #FFFFFF; }
+          .main .section1-container2-block2-card2-label__img.red {
+            content: url("../img/tick-circle-red.svg"); }
         .main .section1-container2-block2-card2__price {
           font-family: 'Inter', sans-serif;
           font-size: 40px;
@@ -673,7 +684,8 @@ body {
           justify-content: center;
           gap: 15px; }
           .main .section1-container2-block1-card1 {
-            width: 90%; }
+            width: 90%;
+            background-image: none; }
           .main .section1-container2-block1-card2 {
             width: 90%; }
         .main .section1-container2-block2 {
@@ -787,3 +799,71 @@ body {
           font-size: 28px;
           font-weight: 500;
           line-height: 20px; } }
+
+.section1_1 {
+  display: flex;
+  justify-content: center;
+  padding: 40px; }
+
+.section1_1-container1 {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px; }
+
+.section1_1-container1__title {
+  font-size: 24px;
+  margin-bottom: 15px; }
+
+.section1_1-container1__email,
+.section1_1-container1__select,
+.section1_1-container1__name,
+.section1_1-container1__card-number,
+.expiry-date p,
+.cvc p {
+  font-size: 14px;
+  color: #bbb;
+  margin-top: 15px; }
+
+input[type="email"], input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: #fff; }
+
+.section1_1-container1-payment {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px; }
+
+.method {
+  flex: 1;
+  padding: 10px;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center; }
+
+.method.selected {
+  border-color: #ff0000; }
+
+.section1_1-container1__card-input {
+  display: flex;
+  align-items: center;
+  gap: 10px; }
+
+.section1_1-container1__card-input img {
+  height: 24px; }
+
+.section1_1-container1__expiry-cvc {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px; }
+
+.expiry-date, .cvc {
+  flex: 1; }

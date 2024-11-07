@@ -32,13 +32,14 @@
   </div>
 </header>
 <main class="main">
+
   <section class="section1">
     <div class="section1-container1">
     <p class="section1-container1__title">Premium Subsciption</p>
     <p class="section1-container1__text">Delve into our extensive array of movie subscription pricing plans, each thoughtfully designed to cater to the distinct preferences.</p>
     <div class="section1-container1-buttons">
       <button class="section1-container1-buttons__btn1 button1">Select Package</button>
-      <button class="section1-container1-buttons__btn2 button2">Show Detail Package</button>
+      <button class="section1-container1-buttons__btn2 button2" onclick="openModal()">Show Detail Package</button>
     </div>
     </div>
     <div class="section1-container2">
@@ -76,6 +77,51 @@
           </label>
           <p class="section1-container2-block2-card2__price">$48.99 <span class="section1-container2-block2-card2__price--min">/year</span></p>
           <p class="section1-container2-block2-card2__period">For PayPal payment promo: Receive a 10% cashback.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section1_1">
+    <div class="section1_1-container1">
+      <p class="section1_1-container1__title">Payment Information</p>
+
+      <!-- Email Address -->
+      <p class="section1_1-container1__email">Email Address*</p>
+      <input type="email" placeholder="example@mostream.com" required>
+
+      <!-- Payment Method Selection -->
+      <p class="section1_1-container1__select">Select Payment Method</p>
+      <div class="section1_1-container1-payment">
+        <div class="section1_1-container1-payment-debit method selected">
+          <img src="img/debit-icon.svg" alt="Debit Icon">
+          <p>Debit/Credit Card</p>
+        </div>
+        <div class="section1_1-container1-payment-virtual method">
+          <img src="img/virtual-icon.svg" alt="Virtual Account Icon">
+          <p>Virtual Account</p>
+        </div>
+      </div>
+
+      <!-- Cardholder Name -->
+      <p class="section1_1-container1__name">Cardholder name*</p>
+      <input type="text" placeholder="Input name" required>
+
+      <!-- Card Number -->
+      <p class="section1_1-container1__card-number">Card number*</p>
+      <div class="section1_1-container1__card-input">
+        <input type="text" placeholder="Input card number" required>
+        <img src="img/visa-mastercard.png" alt="Visa and Mastercard logos">
+      </div>
+
+      <!-- Expiry Date and CVC -->
+      <div class="section1_1-container1__expiry-cvc">
+        <div class="expiry-date">
+          <p>Expiry date*</p>
+          <input type="text" placeholder="MM / YY" required>
+        </div>
+        <div class="cvc">
+          <p>CVC*</p>
+          <input type="text" placeholder="XXX" required>
         </div>
       </div>
     </div>
