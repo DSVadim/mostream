@@ -404,7 +404,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1vh; }
-    .section5-list-item {
+    .section2-container2-item {
       width: 100%;
       background-color: #242323;
       display: flex;
@@ -412,32 +412,32 @@ body {
       align-items: center;
       justify-content: space-around;
       gap: 0; }
-      .section5-list-item-texts {
+      .section2-container2-item-texts {
         width: 85%;
         padding: 3vh 0; }
-        .section5-list-item-texts__title {
+        .section2-container2-item-texts__title {
           font-family: 'Inter', sans-serif;
           font-size: 1.2vw;
           font-weight: 600;
           line-height: 2.6vh;
           color: #FFFFFF; }
-        .section5-list-item-texts__text {
+        .section2-container2-item-texts__text {
           display: none;
           font-family: 'Inter', sans-serif;
           font-size: 18px;
           font-weight: 500;
           line-height: 26px;
           color: #383838; }
-        .section5-list-item-texts__text.open {
+        .section2-container2-item-texts__text.open {
           display: block;
           font-family: 'Inter', sans-serif;
           font-size: 14px;
           font-weight: 500;
           line-height: 20px; }
-      .section5-list-item__img {
+      .section2-container2-item__img {
         display: block;
         padding: 3vh 0; }
-      .section5-list-item__img.minus {
+      .section2-container2-item__img.minus {
         content: url("../img/minus-cirlce.svg"); }
 
 .section6 {
@@ -829,12 +829,12 @@ body {
         font-size: 23px;
         font-weight: 500;
         line-height: 20px; }
-    .main .section5-list-item-texts__title {
+    .main .section2-container2-item-texts__title {
       font-family: 'Inter', sans-serif;
       font-size: 36px;
       font-weight: 600;
       line-height: 26px; }
-    .main .section5-list-item-texts__text {
+    .main .section2-container2-item-texts__text {
       font-family: 'Inter', sans-serif;
       font-size: 14px;
       font-weight: 500;

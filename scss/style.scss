@@ -867,22 +867,22 @@ body{
   .section6 {
     &__title {
       width: 87%;
-      @include Inter(24px, 600, 32px);
+      @include Inter(48px, 600, 32px);
     }
-
     &__text {
       width: 87%;
-      @include Inter(14px, 500, 20px);
+      @include Inter(28px, 500, 20px);
     }
 
     &-inputs {
       @include Flex(column, center, center, 1vh);
       &__input{
+        @include Inter(28px, 500, 20px);
         width: 144%;
       }
       &__btn {
         width: 159%;
-        @include Inter(14px, 600, 20px);
+        @include Inter(28px, 600, 20px);
       }
     }
   }

@@ -13,10 +13,11 @@ document.querySelector('.header-burger__img')
             this.classList.toggle('krest');
     });
 
+
 document.querySelectorAll('.section5-list-item__img').forEach(img => {
     img.addEventListener('click', function () {
-        const text = this.previousElementSibling.querySelector('.section5-list-item-texts__text');
-        text.classList.toggle('open');
+        const text1 = this.previousElementSibling.querySelector('.section5-list-item-texts__text')
+        text1.classList.toggle('open');
         this.classList.toggle('minus');
     });
 });

@@ -994,13 +994,13 @@ body {
   .main .section6__title {
     width: 87%;
     font-family: 'Inter', sans-serif;
-    font-size: 24px;
+    font-size: 48px;
     font-weight: 600;
     line-height: 32px; }
   .main .section6__text {
     width: 87%;
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 28px;
     font-weight: 500;
     line-height: 20px; }
   .main .section6-inputs {
@@ -1010,11 +1010,15 @@ body {
     justify-content: center;
     gap: 1vh; }
     .main .section6-inputs__input {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 20px;
       width: 144%; }
     .main .section6-inputs__btn {
       width: 159%;
       font-family: 'Inter', sans-serif;
-      font-size: 14px;
+      font-size: 28px;
       font-weight: 600;
       line-height: 20px; }
   .footer {
