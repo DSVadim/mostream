@@ -497,6 +497,126 @@ body{
   .main{
     @include Flex(column,center,center,30px);
     padding-top: 50px;
+    .section1{
+      padding: 0;
+      @include Flex(column,center,center,0);
+      width: 90%;
+      &-container1 {
+        margin-left: 80px;
+        width: 103%;
+        &__title {
+          @include Inter(48px, 600, 65px);
+        }
+        &-label {
+          width: 90%;
+          &__text {
+            @include Inter(32px, 500, 48px);
+          }
+          &__input {
+            @include Inter(32px, 500, 48px);
+            padding: 30px 0;
+            width: 100%;
+          }
+        }
+        &__text {
+          @include Inter(32px, 500, 48px);
+        }
+
+        &-cards {
+          @include Flex(row,center,flex-start,5px);
+          width: 100%;
+          &-card {
+            width: 45%;
+            height: 238px;
+            border: 1px solid $border-color;
+            border-radius: 8px;
+
+            &-label {
+
+              &__img {
+                width: 62px;
+                height: 62px;
+              }
+            }
+            &__text {
+              @include Inter(36px, 500, 52px);
+            }
+          }
+        }
+        &-add {
+          width: 100%;
+          &-label {
+            width: 100%;
+            &__text {
+              @include Inter(32px, 500, 48px);
+            }
+            &__input {
+              @include Inter(32px, 500, 48px);
+              padding: 30px 0;
+              width: 80%;
+            }
+          }
+        }
+      }
+
+      &-container2 {
+        @include Flex(column, flex-start, center, 25px);
+        width: 90%;
+        &-block {
+          &-card1 {
+            width: 100%;
+            &-label {
+              width: 100%;
+              &__title {
+                @include Inter(64px, 600,48px);
+              }
+            }
+
+            &__price {
+              @include Inter(60px, 600, 48px);
+            }
+            &__price--min {
+              @include Inter(36px, 500, 37px);
+            }
+            &__period {
+              @include Inter(36px, 500, 37px);
+            }
+          }
+        }
+        &-voucher{
+          width: 100%;
+          &__title{
+            @include Inter(32px, 500,48px);
+          }
+          &-label{
+            @include Flex(column, flex-start, center, 5px);
+            &__input{
+              padding: 30px 0;
+              width: 100%;
+            }
+            &__btn{
+              @include Inter(32px, 600, 48px);
+              padding:8px 0;
+              width: 100%;
+            }
+          }
+        }
+        &-total{
+          width: 100%;
+          &-label{
+            width: 100%;
+            &__text{
+              @include Inter(36px, 600, 48px);
+            }
+          }
+        }
+        &-button {
+          &__btn {
+            @include Inter(32px, 600, 48px);
+          }
+        }
+      }
+    }
     .section2{
       &__title {
         width: 87%;
