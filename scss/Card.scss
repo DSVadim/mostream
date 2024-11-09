@@ -1,0 +1,580 @@
+@import "mixin";
+@import "vars";
+*{
+  padding: 0;
+  margin: 0;
+}
+p{
+  cursor: default;
+}
+a{
+  cursor: pointer;
+}
+ul{
+  list-style-type:none;
+}
+body{
+  background-color: $background-color;
+}
+.button1{
+  @include Inter(0.83vw,600,2.1vh);
+  color:$main-color;
+  background-color:$secondary-color;
+  border-radius: 5px;
+  border-color: $secondary-color;
+  cursor: pointer;
+}
+.button2{
+  @include Inter(0.83vw,600,2.1vh);
+  color:$main-color;
+  background-color: $secondary-bg-color;
+  border-radius: 5px;
+  border-color: $secondary-color;
+  cursor: pointer;
+}
+.card{
+  @include Flex(column, flex-start, center, 15px);
+  width: 45%;
+  border: 1px solid $secondary-bg-color;
+  border-radius: 8px;
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header{
+  backdrop-filter: brightness(90%);
+  padding-top: 2.5vh;
+  @include Flex(row, center, space-around, 2.083vw);
+
+  .Logo {
+    @include Merriweather(1.667vw, 700, 3.704vh);
+    color: $main-color;
+    cursor: default;
+  }
+  &-burger{
+    display: none;
+  }
+  .nav {
+    &-list {
+      @include Flex(row, center, center, 1.5vw);
+
+      &-item {
+        &__link {
+          padding: 0.2vh 0.2vw;
+          color: $nav-color;
+          @include Inter(0.83vw, 600, 2.1vh);
+          cursor: pointer;
+          text-decoration: none;
+
+          &:hover {
+            color: $main-color;
+            background-color: rgba(0, 0, 0, 0.3);
+          }
+        }
+
+      }
+    }
+  }
+
+  .buttons {
+    @include Flex(row, center, center, 0.8vw);
+    .search{
+      position: absolute;
+      right: 400px;
+      border-radius: 8px;
+      height: 30px;
+    }
+    &-svg {
+      border: 1px solid $border-color;
+      border-radius: 5px;
+
+      &__img {
+        padding: 0.2vh 0.2vw;
+      }
+    }
+
+    &__btn1 {
+      padding: 0.5vh 0.4vw;
+    }
+
+    &__btn2 {
+      padding: 0.5vh 0.4vw;
+    }
+  }
+}
+.main {
+  overflow-x: hidden;
+  @include Flex(column,center,center,150px);
+  .section1 {
+    width: 100%;
+    @include Flex(row, center, space-around, 0px);
+    padding-top: 120px;
+
+    &-container1 {
+      @include Flex(column, flex-start, center, 15px);
+      width: 45%;
+      &__title {
+        @include Inter(24px, 600, 32px);
+        color: $main-color;
+      }
+
+      &-label {
+        &__text {
+          @include Inter(16px, 500, 24px);
+          color: $main-color;
+        }
+
+        &__text--red {
+          color: $secondary-color;
+        }
+
+        &__input {
+          color: $main-color;
+          background-color: transparent;
+          border: 1px solid $border-color;
+          border-radius: 8px;
+          padding: 10px 345px 10px 5px;
+        }
+      }
+
+      &__text {
+        @include Inter(16px, 500, 24px);
+        color: $main-color;
+      }
+
+      &-cards {
+        @include Flex(row, center, center, 15px);
+
+        &-card {
+          @include Flex(column, space-around, space-between, 0);
+          width: 250px;
+          height: 138px;
+          border: 1px solid $border-color;
+          border-radius: 8px;
+
+          &-label {
+            padding: 15px;
+            @include Flex(row, center, space-between, 0);
+
+            &__img {
+              width: 32px;
+              height: 32px;
+            }
+          }
+
+          &__text {
+            padding: 15px;
+            color: $main-color;
+            @include Inter(18px, 500, 26px);
+          }
+        }
+      }
+
+      &-add {
+        @include Flex(row, center, center, 15px);
+
+        &-label {
+          &__text {
+            @include Inter(16px, 500, 24px);
+            color: $main-color;
+          }
+
+          &__text--red {
+            color: $secondary-color;
+          }
+
+          &__input {
+            color: $main-color;
+            background-color: transparent;
+            border: 1px solid $border-color;
+            border-radius: 8px;
+            padding: 10px 77px 10px 5px;
+          }
+        }
+      }
+    }
+
+    &-container2 {
+      @include Flex(column, flex-start, center, 25px);
+    width: 35%;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      padding: 15px;
+      &-block {
+        width: 100%;
+        @include Flex(row, center, space-between, 0);
+
+        &-card1 {
+          width: 100%;
+          background-image: url("../img/sub_back.png");
+          &-label {
+            width: 100%;
+            @include Flex(row, center, space-between, 0);
+
+            &__title {
+              padding: 15px 15px 0 15px;
+              @include Inter(32px, 600, 24px);
+              color: $main-color;
+            }
+
+            &__img.red {
+              content: url("../img/tick-circle-red.svg");
+            }
+          }
+
+          &__price {
+            padding:  0 15px;
+            @include Inter(40px, 600, 48px);
+            color: $main-color;
+          }
+
+          &__price--min {
+            @include Inter(18px, 500, 26px);
+          }
+
+          &__period {
+            padding:  0 15px;
+            @include Inter(18px, 500, 26px);
+            color: $secondary-bg-color;
+          }
+          &-label1{
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            background-color: #878787;
+            width: 100%;
+            height: 40px;
+          }
+        }
+      }
+      &-voucher{
+        border-top: 1px solid $nav-color;
+        &__title{
+          padding-top:25px;
+          color: $main-color;
+          @include Inter(16px, 500, 24px);
+        }
+        &-label{
+          @include Flex(row, center, space-between, 5px);
+          &__input{
+            color: $main-color;
+            background-color: transparent;
+            border: 1px solid $border-color;
+            border-radius: 8px;
+            padding: 10px 370px 10px 5px;
+          }
+          &__btn{
+            @include Inter(16px, 600, 24px);
+            color: $main-color;
+            background-color: $secondary-color;
+            padding:8px 5px;
+            border-radius: 8px;
+            border: 1px solid $secondary-color;
+          }
+        }
+      }
+      &-total{
+        padding-top: 25px;
+        border-top: 1px solid $nav-color;
+        @include Flex(column, flex-start, center, 15px);
+        width: 100%;
+        &-label{
+          width: 100%;
+          @include Flex(row,center, space-between, 0);
+          &__text{
+            @include Inter(18px, 600, 26px);
+            color: $main-color;
+          }
+        }
+      }
+      &-button {
+        width: 100%;
+        padding-top: 25px;
+        border-top: 1px solid $nav-color;
+        &__btn {
+          @include Inter(16px, 600, 24px);
+          color: $main-color;
+          background-color: $secondary-color;
+          padding: 8px 0;
+          width: 100%;
+          border-radius: 8px;
+          border: 1px solid $secondary-color;
+        }
+      }
+    }
+  }
+  .section2{
+    text-align: center;
+    padding: 15vh 0;
+    @include Flex(column,center,center,2vh);
+    background-image: url("../img/back.png");
+    width: 100%;
+
+    &__title{
+      width: 45%;
+      @include Inter(2.4vw,600,5.185vh);
+      color:$main-color;
+    }
+    &__text{
+      width: 40%;
+      @include Inter(0.9vw,500,2.1vh);
+      color:$nav-color;
+    }
+    &-inputs{
+      @include Flex(row,center,center,0.5vw);
+      &__input{
+        background-color: $background-color;
+        padding: 1.5vh 6vw 1.5vh 0;
+        border-radius: 1px;
+      }
+      &__btn{
+        padding: 1.4vh 0.5vw;
+      }
+    }
+  }
+}
+.footer{
+  @include Flex(column,center,center,6vh);
+  padding-top: 7vh;
+  &-block {
+    width: 100%;
+    @include Flex(row, flex-start, flex-start, 0);
+    &-container1 {
+      @include Flex(row, flex-start, space-around, 3vw);
+
+      .Logo {
+        @include Merriweather(1.667vw, 700, 3.704vh);
+        color: $main-color;
+      }
+
+      &-texts {
+        width: 20%;
+
+        &__text {
+          color: $nav-color;
+        }
+      }
+    }
+
+    &-container2 {
+      @include Flex(row, center, center, 3vw);
+
+      &-list {
+        @include Flex(column, flex-start, center, 1vh);
+
+        &-item {
+          &__link {
+            color: $main-color;
+          }
+        }
+      }
+
+      &-text2 {
+        @include Flex(column, flex-start, center, 1vh);
+
+        &__title {
+          @include Inter(0.9vw, 600, 2.1vh);
+          color: $main-color;
+        }
+
+        &-image {
+          @include Flex(row, center, center, 0.5vw);
+        }
+      }
+    }
+  }
+  &-under{
+    width: 78%;
+    padding-top: 2vh;
+    @include Flex(row,center,space-between,0);
+    border-top: 1px solid $nav-color;
+    &__text{
+      @include Inter(0.9vw,500,2.1vh);
+      color:$nav-color;
+    }
+    &-under2{
+      padding:2vh 0;
+      @include Flex(row,center,space-between,0.4vw);
+      &__text{
+        @include Inter(0.9vw,500,2.1vh);
+        color:$nav-color;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 375px) {
+  .header {
+    @include Flex(column, center, center, 0);
+    padding-top: 20px;
+
+    &-burger {
+      background-color: rgba(16, 16, 16, 0);
+      display: block;
+      border: 1px solid $border-color;
+      padding: 25px;
+
+      &__img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    &-burger__img.krest {
+      content: url("../img/krest.png");
+      width: 35px;
+      height: 35px;
+    }
+
+    .media {
+      @include Flex(row, center, space-around, 350px);
+    }
+
+    .Logo {
+      @include Merriweather(48px, 700, 40px);
+    }
+    .nav {
+      display: none;
+      padding: 0;
+      margin: 0;
+      height: 0;
+      top: 100%;
+      width: 100%;
+      transform: translateY(-100%);
+
+
+
+      &-list {
+        background-color: transparent;
+        @include Flex(column, center, center, 0.5vh);
+
+        &-item {
+          padding: 15px;
+
+          &__link {
+            @include Inter(32px, 600, 24px);
+          }
+        }
+      }
+    }
+
+    .nav.open {
+      background-color: rgba(16, 16, 16, 0.23);
+      display: block;
+      transform: translateY(0);
+      opacity: 1;
+      z-index: 2;
+      height: fit-content;
+    }
+
+    .buttons {
+      width: 100%;
+      display: none;
+
+      &-svg {
+        display: none;
+      }
+
+      &__btn1 {
+        @include Inter(32px, 600, 24px);
+        width: 40%;
+      }
+
+      &__btn2 {
+        @include Inter(32px, 600, 24px);
+        width: 40%;
+      }
+    }
+
+    .buttons.open {
+      background-color: rgba(16, 16, 16, 0.23);
+      display: flex;
+      flex-direction: column;
+      transform: translateY(0);
+      opacity: 1;
+      z-index: 2;
+      padding-bottom: 50px;
+    }
+  }
+  .main{
+    @include Flex(column,center,center,30px);
+    padding-top: 50px;
+    .section2{
+      &__title {
+        width: 87%;
+        @include Inter(48px, 600, 32px);
+      }
+
+      &__text {
+        width: 87%;
+        @include Inter(28px, 500, 20px);
+      }
+
+      &-inputs {
+        @include Flex(column, center, center, 1vh);
+        &__input{
+          @include Inter(28px, 500, 20px);
+          width: 144%;
+        }
+        &__btn {
+          width: 159%;
+          @include Inter(28px, 600, 20px);
+        }
+      }
+    }
+  }
+  .footer{
+    padding-left: 15px;
+    @include Flex(column, flex-start, flex-start, 3vw);
+    &-block {
+      @include Flex(column, flex-start, flex-start, 3vw);
+      &-container1 {
+        &-texts {
+          width: 99%;
+
+          .Logo {
+            @include Merriweather(48px, 700, 40px);
+          }
+        }
+      }
+
+      &-container2 {
+        @include Flex(row, flex-start, flex-start, 4vw);
+        flex-wrap: wrap;
+
+        &-list {
+          padding-right: 55px;
+          @include Flex(column, flex-start, flex-start, 3vw);
+
+          &-item {
+            &__link {
+              @include Inter(20px, 600, 20px);
+            }
+          }
+        }
+
+        &-text2 {
+          &__title {
+            @include Inter(28px, 600, 20px);
+          }
+        }
+      }
+    }
+    &-under{
+      width: 90%;
+      @include Flex(column, flex-start, flex-start, 3vw);
+      &__text{
+        @include Inter(28px, 500, 20px);
+      }
+      &-under2{
+        padding: 0;
+        @include Flex(row,center,space-between,1vw);
+        &__text{
+          @include Inter(28px, 500, 20px);
+        }
+
+      }
+    }
+  }
+}
+
+
+

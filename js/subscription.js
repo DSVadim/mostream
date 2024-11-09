@@ -51,6 +51,7 @@ document.querySelector('.section1-container1-buttons__btn1')
             }
         });
         if (isSubscriptionMade) {
+            window.location.href ='Card.html';
         } else {
             alert('Error: No subscription selected');
         }

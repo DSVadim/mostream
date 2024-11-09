@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,600&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/Card.css">
+</head>
+<body>
+<header class="header">
+  <div class="media">
+    <p class="Logo">MOSTREAM</p>
+    <button class="header-burger"><img class="header-burger__img" src="img/burger.svg"></button>
+  </div>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-list-item"><a class="nav-list-item__link" href="index.html">HOME</a></li>
+      <li class="nav-list-item"><a class="nav-list-item__link">LIVE</a></li>
+      <li class="nav-list-item"><a class="nav-list-item__link">TV SHOW</a></li>
+      <li class="nav-list-item"><a class="nav-list-item__link">MOVIES</a></li>
+      <li class="nav-list-item"><a class="nav-list-item__link">MORE</a></li>
+    </ul>
+  </nav>
+  <div class="buttons">
+    <input type="search" class="search" style="display: none">
+    <div  class="buttons-svg"><a><img class="buttons-svg__img" src="img/search-normal.svg" alt="img"></a></div>
+    <button class="buttons__btn1 button1" onclick="document.location='register.html'">Subscribe</button>
+    <button class="buttons__btn2 button2" onclick="document.location='login.html'">Sign in</button>
+  </div>
+</header>
+<main class="main">
+  <section class="section1">
+    <div class="section1-container1">
+      <p class="section1-container1__title">Payment Information</p>
+      <label class="section1-container1-label">
+        <p class="section1-container1-label__text">Email Address<span class="section1-container1-label__text--red">*</span></p>
+        <input class="section1-container1-label__input" placeholder="example@mostream.com">
+      </label>
+      <p class="section1-container1__text">Select Payment Method</p>
+      <div class="section1-container1-cards">
+        <div class="section1-container1-cards-card">
+          <label class="section1-container1-cards-card-label">
+            <img class="section1-container-cards1-card-label__img" src="img/debit.svg" alt="img">
+            <img class="section1-container1-cards-card-label__img" src="img/tick-circle.svg" alt="img">
+          </label>
+          <p class="section1-container1-cards-card__text">Debit/Credit Card</p>
+        </div>
+        <div class="section1-container1-cards-card">
+          <label class="section1-container1-cards-card-label">
+            <img class="section1-container-cards1-card-label__img" src="img/debit.svg" alt="img">
+            <img class="section1-container1-cards-card-label__img" src="img/tick-circle.svg" alt="img">
+          </label>
+          <p class="section1-container1-cards-card__text">Virtual Account</p>
+        </div>
+      </div>
+      <label class="section1-container1-label">
+        <p class="section1-container1-label__text">Cardholder name<span class="section1-container1-label__text--red">*</span></p>
+        <input class="section1-container1-label__input" placeholder="Input name">
+      </label>
+      <label class="section1-container1-label">
+        <p class="section1-container1-label__text">Card number<span class="section1-container1-label__text--red">*</span></p>
+        <input class="section1-container1-label__input" placeholder="Input card number">
+      </label>
+      <div class="section1-container1-add">
+        <label class="section1-container1-add-label">
+          <p class="section1-container1-add-label__text">Expiry date<span class="section1-container1-label__text--red">*</span></p>
+          <input class="section1-container1-add-label__input" placeholder="MM / YY">
+        </label>
+        <label class="section1-container1-add-label">
+          <p class="section1-container1-add-label__text">CVC<span class="section1-container1-label__text--red">*</span></p>
+          <input class="section1-container1-add-label__input" placeholder="XXX">
+        </label>
+      </div>
+    </div>
+    <div class="section1-container2">
+      <div class="section1-container2-block-card1 card">
+        <label class="section1-container2-block-card1-label">
+          <p class="section1-container2-block-card1-label__title">30 Day - All Device</p>
+        </label>
+        <p class="section1-container2-block-card1__price">$8.99 <span class="section1-container2-block-card1__price--min">/month</span></p>
+        <p class="section1-container2-block-card1__period">For PayPal payment promo: Receive a 10% cashback.</p>
+        <label class="section1-container2-block-card1-label1">
+          <p>Tyt shoto ye</p>
+        </label>
+      </div>
+      <div class="section1-container2-voucher">
+        <p class="section1-container2-voucher__title">Voucher</p>
+        <label class="section1-container2-voucher-label">
+          <input class="section1-container2-voucher-label__input" type="text" id="voucher" placeholder="Code voucher">
+          <button class="section1-container2-voucher-label__btn">Apply Promo</button>
+        </label>
+      </div>
+      <div class="section1-container2-total">
+        <label class="section1-container2-total-label">
+          <p class="section1-container2-total-label__text">Subtotal</p>
+          <p class="section1-container2-total-label__text">$ 8.99</p>
+        </label>
+        <label class="section1-container2-total-label">
+          <p class="section1-container2-total-label__text">Tax</p>
+          <p class="section1-container2-total-label__text">$ 0.899</p>
+        </label>
+        <label class="section1-container2-total-label">
+          <p class="section1-container2-total-label__text">Total payment</p>
+          <p class="section1-container2-total-label__text"><span class="section1-container2-total-label__text--big">$ 9.889</span> Per month</p>
+        </label>
+      </div>
+      <div class="section1-container2-button">
+        <button class="section1-container2-button__btn">Checkout Now</button>
+      </div>
+
+    </div>
+  </section>
+  <section class="section2">
+    <p class="section2__title">Unlock Your Cinematic Experience!
+      Ready to Dive Into Movie Magic</p>
+    <p class="section2__text">Embark on a journey beyond the ordinary and unlock the door to a world where every frame tells a story and every scene is a masterpiece.</p>
+    <div class="section2-inputs">
+      <input class="section2-inputs__input" type="email" placeholder="Input email">
+      <button class="section2-inputs__btn button1" onclick="document.location='register.html'">Subscribe</button>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="footer-block">
+    <div class="footer-block-container1">
+      <div class="footer-block-container1-texts">
+        <p class="Logo">MOSTREAM</p>
+        <p class="footer-block-container1-texts__text">where every frame tells a story, and every click opens the door to a world of limitless entertainment. Immerse yourself in a universe of unparalleled movie.</p>
+      </div>
+    </div>
+    <div class="footer-block-container2">
+      <ul class="footer-block-container2-list">
+        <li class="footer-block-container2-list-item"><a class="footer-block-container2-list-item__link">Home</a></li>
+        <li class="footer-block-container2-list-item"><a class="footer-block-container2-list-item__link">Movies</a></li>
+        <li class="footer-block-container2-list-item"><a class="footer-block-container2-list-item__link">Tv Shows</a></li>
+        <li class="footer-block-container2-list-item"><a class="footer-block-container2-list-item__link">Reedem</a></li>
+      </ul>
+      <ul class="footer-block-container2-list">
+        <li class="footer-block-container2-list-item"><a class="footer-block-container2-list-item__link">About</a></li>
+        <li class="footer-block-container2-list-item"><a class="footer-block-container2-list-item__link">Career</a></li>
+        <li class="footer-block-container2-list-item"><a class="footer-block-container2-list-item__link">Investors</a></li>
+        <li class="footer-block-container2-list-item"><a class="footer-block-container2-list-item__link">Contact Us</a></li>
+      </ul>
+      <ul class="footer-block-container2-list">
+        <li class="footer-block-container2-list-item"><a class="footer-block-container2-list-item__link">FAQ</a></li>
+        <li class="footer-block-container2-list-item"><a class="footer-block-container2-list-item__link">Help Center</a></li>
+        <li class="footer-block-container2-list-item"><a class="footer-block-container2-list-item__link">Media Center</a></li>
+        <li class="footer-block-container2-list-item"><a class="footer-block-container2-list-item__link">Cookie Preferences</a></li>
+      </ul>
+      <div class="footer-block-container2-text2">
+        <p class="footer-block-container2-text2__title">Stay up to date</p>
+        <div class="footer-block-container2-text2-image">
+          <a href="https://www.facebook.com/?locale=uk_UA"><img class="footer-block-container2-text2-image__img" src="img/fac.svg" alt="img"></a>
+          <a href="https://www.instagram.com/accounts/login/"><img class="footer-block-container2-text2-image__img" src="img/inst.svg" alt="img"></a>
+          <a href="https://www.tiktok.com/uk-UA/"><img  class="footer-block-container2-text2-image__img" src="img/tic.svg" alt="img"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-under">
+    <p class="footer-under__text">© 2023 Mostream all rights reserved</p>
+    <div class="footer-under-under2">
+      <p class="footer-under-under2__text">Terms and condition</p>
+      <img class="footer-under-under2__img" src="img/Ellipse%201.svg">
+      <p class="footer-under-under2__text">Privacy Policy</p>
+    </div>
+  </div>
+</footer>
+<script src="js/subscription.js"></script>
+</body>
+</html>
