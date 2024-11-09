@@ -661,3 +661,41 @@ body{
     }
   }
 }
+.modal {
+  display: none;
+  &-content {
+    @include Flex(column,flex-start,center,5px);
+    .close-btn {
+      color: white;
+    }
+    &__title{
+      @include Inter(26px,600,40px);
+      margin-top: 0;
+      color: white;
+    }
+    &__subtitle{
+      color: #ffffff;
+      @include Inter(24px,600,32px);
+    }
+    &__text{
+      @include Inter(12px,500,26px);
+      color: #636363;
+    }
+
+    &-list{
+      list-style: none;
+      padding-left: 20px;
+      &__item{
+        @include Inter(12px,500,26px);
+        color: #636363;
+      }
+      &__item::before{
+        content: "•";
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+
+
