@@ -5,15 +5,6 @@ document.querySelectorAll('.section2-container2-item__img').forEach(img => {
         this.classList.toggle('minus');
     });
 });
-document.querySelector('.header-burger__img')
-    .addEventListener('click', function () {
-        const menuItems = document.querySelectorAll('.nav, .buttons');
-
-        menuItems.forEach(menu => {
-            menu.classList.toggle('open');
-        });
-        this.classList.toggle('krest');
-    });
 function toggleSingleCardStyle(activeCardSelector, activeImgSelector) {
     const allCards = document.querySelectorAll('.section1-container2-block1-card1, .section1-container2-block1-card2, .section1-container2-block2-card1, .section1-container2-block2-card2');
     const allImages = document.querySelectorAll('.section1-container2-block1-card1-label__img, .section1-container2-block1-card2-label__img, .section1-container2-block2-card1-label__img, .section1-container2-block2-card2-label__img');

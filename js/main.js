@@ -3,16 +3,6 @@ document.body.onload = function (){
     Url('https://www.youtube.com/watch?v=PDxtjIFfB1M');
     UrlMore('https://planetakino.ua/movies/elio/#today')
 }
-document.querySelector('.header-burger__img')
-    .addEventListener('click', function () {
-            const menuItems = document.querySelectorAll('.nav, .buttons');
-
-            menuItems.forEach(menu => {
-                    menu.classList.toggle('open');
-            });
-            this.classList.toggle('krest');
-    });
-
 
 document.querySelectorAll('.section5-list-item__img').forEach(img => {
     img.addEventListener('click', function () {
