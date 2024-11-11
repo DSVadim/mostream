@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "sass": "node-sass -w ../mostream/scss/Subscription.scss css/Subscription.css"
+    "sass": "node-sass -w build/scss/Subscription.scss css/Subscription.css"
   },
   "devDependencies": {
     "node-sass": "^9.0.0"
