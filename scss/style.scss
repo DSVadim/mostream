@@ -22,7 +22,7 @@ body{
   color:$main-color;
   background-color:$secondary-color;
   border-radius: 5px;
-  border-color: $secondary-color;
+  border-color:$secondary-color;
   cursor: pointer;
 }
 .button2{
@@ -206,7 +206,7 @@ body{
               backdrop-filter: brightness(50%);
             }
             .section1-trend-slider-card1__text.light{
-              border: 1px solid $main-color;
+              border: 1px solid$main-color;
               backdrop-filter: brightness(100%);
             }
           }
@@ -473,7 +473,7 @@ body{
   &-inputs{
     @include Flex(row,center,center,0.5vw);
     &__input{
-    background-color: $background-color;
+    background-color:$background-color;
       padding: 1.5vh 6vw 1.5vh 0;
       border-radius: 1px;
     }
@@ -501,7 +501,7 @@ body{
         width: 20%;
 
         &__text {
-          color: $nav-color;
+          color:$nav-color;
         }
       }
     }
