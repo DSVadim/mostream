@@ -91,7 +91,6 @@ function showModal() {
       color: #636363;
     }
     .modal-content__img{
-    content: url("../img/js.svg");
     width: 255px;
     height: 255px;
     }
@@ -141,6 +140,8 @@ function showModal() {
     `;
 
     document.body.insertAdjacentHTML('beforeend', html);
+    const img= document.querySelector('.modal-content__img');
+    img.style.content = 'url("../img/js.svg")';
 }
 
 function closeModal() {
