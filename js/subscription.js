@@ -147,7 +147,7 @@ function showModal(price, period) {
         @media screen and (max-width: 1000px) and (min-width: 375px) {
         .modal-content {
         max-width: max-content;
-        gap: 45px;
+        gap: 25px;
         }
     .modal-content__title {
       font-family: 'Inter', sans-serif;
