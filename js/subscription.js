@@ -20,7 +20,7 @@ function toggleSingleCardStyle(activeCardSelector, activeImgSelector) {
         allImages.forEach(img => img.classList.remove('red'));
 
         activeCard.style.borderColor = '#F14141';
-        activeCard.style.backgroundImage = 'url("img/sub_back.png")';
+        activeCard.style.backgroundImage = 'url("image/sub_back.png")';
         activeImage.classList.add('red');
     });
 }
@@ -178,7 +178,6 @@ function showModal(price, period) {
     document.body.insertAdjacentHTML('beforeend', html);
 }
 
-// Function to close the modal
 function closeModal() {
     const modal = document.getElementById("modal");
     if (modal) {
@@ -186,7 +185,6 @@ function closeModal() {
     }
 }
 
-// Optional: Close modal when clicking outside of the modal content
 window.onclick = function(event) {
     const modal = document.getElementById("modal");
     if (event.target === modal) {
