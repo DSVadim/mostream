@@ -147,24 +147,23 @@ function showModal(price, period) {
         @media screen and (max-width: 1000px) and (min-width: 375px) {
         .modal-content {
         max-width: max-content;
-        width: 70%;
-        gap: 55px;
+        gap: 45px;
         }
     .modal-content__title {
       font-family: 'Inter', sans-serif;
-      font-size: 38px;
+      font-size: 34px;
       font-weight: 600;
-      line-height: 50px;}
+      line-height: 45px;}
     .modal-content__subtitle {
       font-family: 'Inter', sans-serif;
-      font-size: 37px;
+      font-size: 32px;
       font-weight: 600;
-      line-height: 42px; }
+      line-height: 32px; }
     .modal-content__text {
       font-family: 'Inter', sans-serif;
       font-size: 29px;
       font-weight: 500;
-      line-height: 36px; }
+      line-height: 26px; }
     .modal-content-list {
       list-style: none;
       padding-left: 20px; }
@@ -172,7 +171,7 @@ function showModal(price, period) {
         font-family: 'Inter', sans-serif;
         font-size: 29px;
         font-weight: 500;
-        line-height: 36px;
+        line-height: 26px;
 </style>
     `;
 
