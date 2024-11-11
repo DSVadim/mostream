@@ -1,3 +1,19 @@
+function ifShow() {
+    const inputs = document.querySelectorAll('.section1-container1-label__input');
+    let allFilled = true;
+
+    inputs.forEach(input => {
+        if (input.value.trim() === "") {
+            allFilled = false;
+        }
+    });
+
+    if (!allFilled) {
+        alert('Please fill in all required fields.');
+    } else {
+        showModal();
+    }
+}
 function showModal() {
     const html = `
         <div id="modal" class="modal" style="display: flex; align-items: center; justify-content: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);">
@@ -103,3 +119,26 @@ window.onclick = function(event) {
         closeModal();
     }
 };
+function toggleSingleCardStyle(activeCardSelector, activeImgSelector) {
+    const allCards = document.querySelectorAll('.section1-container1-cards-card,.section1-container1-cards-card1');
+    const allImages = document.querySelectorAll('.section1-container1-cards-card-label__img,.section1-container1-cards-card1-label__img');
+
+    const activeImage = document.querySelector(activeImgSelector);
+    const activeCard = document.querySelector(activeCardSelector);
+
+    activeCard.addEventListener('click', function() {
+        allCards.forEach(card => {
+            card.style.borderColor = '#242323';
+            card.style.backgroundImage = 'none';
+        });
+
+        allImages.forEach(img => img.classList.remove('red'));
+
+        activeCard.style.borderColor = '#F14141';
+        activeImage.classList.add('red');
+    });
+}
+
+
+toggleSingleCardStyle('.section1-container1-cards-card', '.section1-container1-cards-card-label__img')
+toggleSingleCardStyle('.section1-container1-cards-card1', '.section1-container1-cards-card1-label__img')

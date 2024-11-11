@@ -530,19 +530,41 @@ body{
             height: 238px;
             border: 1px solid $border-color;
             border-radius: 8px;
-
             &-label {
-
+              &__img1 {
+                width: 62px;
+                height: 62px;
+              }
               &__img {
                 width: 62px;
                 height: 62px;
+              }
+              &__img.red{
+                content: url("../img/tick-circle-red.svg");
               }
             }
             &__text {
               @include Inter(36px, 500, 52px);
             }
           }
+          &-card1 {
+            width: 45%;
+            height: 238px;
+            border: 1px solid $border-color;
+            border-radius: 8px;
+            &-label {
+
+              &__img {
+                width: 62px;
+                height: 62px;
+              }
+              &__img.red{
+                content: url("../img/tick-circle-red.svg");
+              }
+            }
+          }
         }
+
         &-add {
           width: 100%;
           &-label {

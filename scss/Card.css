@@ -199,17 +199,6 @@ body {
   border: 1px solid #383838;
   border-radius: 8px;
 }
-.main .section1-container1-cards-card1 {
-  display: flex;
-  flex-direction: column;
-  align-items: space-around;
-  justify-content: space-between;
-  gap: 0;
-  width: 250px;
-  height: 138px;
-  border: 1px solid #383838;
-  border-radius: 8px;
-}
 .main .section1-container1-cards-card-label {
   padding: 15px;
   display: flex;
@@ -218,23 +207,9 @@ body {
   justify-content: space-between;
   gap: 0;
 }
-.main .section1-container1-cards-card-label__img1 {
-  width: 32px;
-  height: 32px;
-}
 .main .section1-container1-cards-card-label__img {
   width: 32px;
   height: 32px;
-}
-.main .section1-container1-cards-card-label__img.red{
-  content: url("../img/tick-circle-red.svg");
-}
-.main .section1-container1-cards-card1-label__img {
-  width: 32px;
-  height: 32px;
-}
-.main .section1-container1-cards-card1-label__img.red{
-  content: url("../img/tick-circle-red.svg");
 }
 .main .section1-container1-cards-card__text {
   padding: 15px;
@@ -731,6 +706,10 @@ body {
     height: 238px;
     border: 1px solid #383838;
     border-radius: 8px;
+  }
+  .main .section1-container1-cards-card-label__img1 {
+    width: 62px;
+    height: 62px;
   }
   .main .section1-container1-cards-card-label__img {
     width: 62px;
