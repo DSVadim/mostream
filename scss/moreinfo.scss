@@ -1,0 +1,633 @@
+@import "_vars";
+@import "_mixin";
+*{
+  padding: 0;
+  margin: 0;
+
+}
+p{
+  cursor: default;
+}
+a{
+  cursor: pointer;
+}
+ul{
+  list-style-type:none;
+}
+body{
+  background-color: $background-color;
+}
+.button1{
+  @include Inter(0.83vw,600,2.1vh);
+  color:$main-color;
+  background-color:$secondary-color;
+  border-radius: 5px;
+  border-color:$secondary-color;
+  cursor: pointer;
+}
+.button2{
+  @include Inter(0.83vw,600,2.1vh);
+  color:$main-color;
+  background-color: $secondary-bg-color;
+  border-radius: 5px;
+  border-color: $secondary-bg-color;
+  cursor: pointer;
+}
+.lscard{
+  overflow: hidden;
+  text-align: center;
+  @include Flex(column,center,flex-end,0.1vh);
+  height:46.667vh;
+  width: 19.583vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.baner1{
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/baner1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.baner2{
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/baner2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.baner3{
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/baner3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.baner4{
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/baner4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+
+
+.baner {
+  background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.9)), url("../img/Hero Section.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.header {
+  backdrop-filter: brightness(90%);
+  padding-top: 2.5vh;
+  @include Flex(row, center, space-around, 2.083vw);
+
+  .Logo {
+    @include Merriweather(1.667vw, 700, 3.704vh);
+    color: $main-color;
+    cursor: default;
+  }
+  &-burger{
+    display: none;
+  }
+  .nav {
+    &-list {
+      @include Flex(row, center, center, 1.5vw);
+
+      &-item {
+        &__link {
+          padding: 0.2vh 0.2vw;
+          color: $nav-color;
+          @include Inter(0.83vw, 600, 2.1vh);
+          cursor: pointer;
+          text-decoration: none;
+
+
+          &:hover {
+            color: $main-color;
+            background-color: rgba(0, 0, 0, 0.3);
+          }
+        }
+
+      }
+    }
+  }
+
+  .buttons {
+    @include Flex(row, center, center, 0.8vw);
+    .search{
+      position: absolute;
+      right: 400px;
+      border-radius: 8px;
+      height: 30px;
+    }
+    &-svg {
+      border: 1px solid $border-color;
+      border-radius: 5px;
+
+      &__img {
+        padding: 0.2vh 0.2vw;
+      }
+    }
+
+    &__btn1 {
+      padding: 0.5vh 0.4vw;
+    }
+
+    &__btn2 {
+      padding: 0.5vh 0.4vw;
+    }
+  }
+}
+
+.section1 {
+  backdrop-filter: brightness(90%);
+  width: 45%;
+  padding: 25vh 30vw 10vh 30vw;
+  @include Flex(column, center, center, 5.963vh);
+  &__title {
+    @include Inter(2.1vw, 500, 5.185vh);
+    color: $main-color;
+    text-align: center;
+  }
+
+  &__text {
+    @include Inter(0.9vw, 500, 2.407vh);
+    color: rgba(154, 154, 154, 0.58);
+    text-align: center;
+  }
+
+  &-buttons {
+    @include Flex(row, center, center, 0.9vw);
+
+    &__btn1 {
+      @include Flex(row, center, center, 0.1vw);
+      padding: 0.8vh 0.5vw;
+    }
+
+    &__btn2 {
+      @include Flex(row, center, center, 0.1vw);
+      padding: 0.8vh 0.5vw;
+    }
+  }
+}
+.main {
+  .section2 {
+    padding: 80px;
+    width: 90%;
+
+    &__title {
+      color: $main-color;
+      @include Inter(48px, 600, 56px);
+    }
+
+    &__text1 {
+      padding-top: 15px;
+      color: $secondary-bg-color;
+      @include Inter(18px, 500, 26px);
+    }
+    &__text2 {
+      padding-top: 15px;
+      color: $secondary-bg-color;
+      @include Inter(18px, 500, 26px);
+    }
+    &__text3 {
+      padding-top: 15px;
+      color: $secondary-bg-color;
+      @include Inter(18px, 500, 26px);
+    }
+  }
+  .section3{
+    padding-top: 50px;
+    @include Flex(column,center,center,15px);
+    &__title {
+      width: 70%;
+      text-align: center;
+      color: $main-color;
+      @include Inter(48px, 600, 56px);
+    }
+    &-images{
+      padding-top: 30px;
+      @include Flex(row,center,center,80px);
+      &-image{
+        width: 24%;
+        &__text{
+          text-align: center;
+          padding-top: 15px;
+          @include Inter(24px,600,32px);
+          color: $main-color;
+        }
+      }
+    }
+  }
+  .section4 {
+    padding: 50px 0;
+    @include Flex(column, center, center, 15px);
+    &__title {
+      width: 40%;
+      text-align: center;
+      color: $main-color;
+      @include Inter(48px, 600, 56px);
+    }
+    &-images{
+      width: 90%;
+      padding-top: 30px;
+      @include Flex(row,center,center,80px);
+      &-image1{
+        &-label{
+          @include Flex(row,center,flex-end,5px);
+          width: 100%;
+          &__text{
+            color: $secondary-bg-color;
+            @include Inter(18px, 600, 26px);
+          }
+          &__text.light{
+            color: $main-color;
+          }
+          &__img{
+            filter: brightness(30%);
+          }
+          &__img.light{
+            filter: brightness(100%);
+          }
+        }
+        &-back {
+          background-image: url("../img/image4.png");
+          filter: brightness(30%);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        width: 376px;
+          height: 484px;
+        }
+        &-back.light{
+          filter: brightness(100%);
+        }
+      }
+      &-image2{
+        &-label{
+        @include Flex(row,center,flex-end,5px);
+        width: 100%;
+        &__text{
+          color: $secondary-bg-color;
+          @include Inter(18px, 600, 26px);
+        }
+          &__text.light{
+            color: $main-color;
+          }
+          &__img{
+            filter: brightness(30%);
+          }
+          &__img.light{
+            filter: brightness(100%);
+          }
+      }
+        &-back {
+          background-image: url("../img/image5.png");
+          filter: brightness(30%);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          width: 376px;
+          height: 484px;
+        }
+        &-back.light{
+          filter: brightness(100%);
+        }
+      }
+      &-image3{
+        &-label{
+          @include Flex(row,center,flex-end,5px);
+          width: 100%;
+          &__text{
+            color: $secondary-bg-color;
+            @include Inter(18px, 600, 26px);
+          }
+          &__text.light{
+            color: $main-color;
+          }
+          &__img{
+            filter: brightness(30%);
+          }
+          &__img.light{
+            filter: brightness(100%);
+          }
+        }
+        &-back {
+          background-image: url("../img/image6.png");
+          filter: brightness(30%);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          width: 376px;
+          height: 484px;
+        }
+        &-back.light{
+          filter: brightness(100%);
+        }
+      }
+    }
+  }
+  .section5{
+    text-align: center;
+    padding: 15vh 0;
+    @include Flex(column,center,center,2vh);
+    background-image: url("../img/back.png");
+    &__title{
+      width: 45%;
+      @include Inter(2.4vw,600,5.185vh);
+      color:$main-color;
+    }
+    &__text{
+      width: 40%;
+      @include Inter(0.9vw,500,2.1vh);
+      color:$nav-color;
+    }
+    &-inputs{
+      @include Flex(row,center,center,0.5vw);
+      &__input{
+        background-color:$background-color;
+        padding: 1.5vh 6vw 1.5vh 0;
+        border-radius: 1px;
+      }
+      &__btn{
+        padding: 1.4vh 0.5vw;
+      }
+    }
+  }
+}
+.footer{
+  @include Flex(column,center,center,6vh);
+  padding-top: 7vh;
+  &-block {
+    width: 100%;
+    @include Flex(row, flex-start, flex-start, 0);
+    &-container1 {
+      @include Flex(row, flex-start, space-around, 3vw);
+
+      .Logo {
+        @include Merriweather(1.667vw, 700, 3.704vh);
+        color: $main-color;
+      }
+
+      &-texts {
+        width: 20%;
+
+        &__text {
+          color:$nav-color;
+        }
+      }
+    }
+
+    &-container2 {
+      @include Flex(row, center, center, 3vw);
+
+      &-list {
+        @include Flex(column, flex-start, center, 1vh);
+
+        &-item {
+          &__link {
+            color: $main-color;
+          }
+        }
+      }
+
+      &-text2 {
+        @include Flex(column, flex-start, center, 1vh);
+
+        &__title {
+          @include Inter(0.9vw, 600, 2.1vh);
+          color: $main-color;
+        }
+
+        &-image {
+          @include Flex(row, center, center, 0.5vw);
+        }
+      }
+    }
+  }
+  &-under{
+    width: 78%;
+    padding-top: 2vh;
+    @include Flex(row,center,space-between,0);
+    border-top: 1px solid $nav-color;
+    &__text{
+      @include Inter(0.9vw,500,2.1vh);
+      color:$nav-color;
+    }
+    &-under2{
+      padding:2vh 0;
+      @include Flex(row,center,space-between,0.4vw);
+      &__text{
+        @include Inter(0.9vw,500,2.1vh);
+        color:$nav-color;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) and (min-width: 375px) {
+  ::-webkit-scrollbar{
+    height: 0;
+  }
+  .header{
+    @include Flex(column,center,center,0);
+    padding-top: 20px;
+    &-burger{
+      background-color: rgba(16, 16, 16, 0);
+      display: block;
+      border: 1px solid $border-color;
+      padding: 25px;
+      &__img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    &-burger__img.krest{
+      content: url("../img/krest.png");
+      width: 35px;
+      height: 35px;
+    }
+
+    .media{
+      @include Flex(row,center,space-around,350px);
+    }
+    .Logo{
+      @include Merriweather(48px,700,40px);
+    }
+    .nav{
+      display: none;
+      padding: 0;
+      margin: 0;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-100%);
+      transition: transform 0.5s ease, opacity 0.5s ease , display ease-in-out 0.3s;
+      &-list{
+        background-color: transparent;
+        @include Flex(column,center,center,0.5vh);
+        &-item{
+          padding: 15px;
+          &__link{
+            @include Inter(32px,600,24px);
+          }
+        }
+      }
+    }
+    .nav.open{
+      background-color: rgba(16, 16, 16, 0.23);
+      display: block;
+      transform: translateY(0);
+      opacity: 1;
+      z-index: 2;
+    }
+
+    .buttons{
+      width: 100%;
+      display: none;
+      &-svg{
+        display: none;
+      }
+      &__btn1{
+        @include Inter(32px,600,24px);
+        width: 40%;
+      }
+      &__btn2{
+        @include Inter(32px,600,24px);
+        width: 40%;
+      }
+    }
+    .buttons.open{
+      background-color: rgba(16, 16, 16, 0.23);
+      display: flex;
+      flex-direction: column;
+      transform: translateY(0);
+      opacity: 1;
+      z-index: 2;
+      padding-bottom: 50px;
+    }
+  }
+  .section1 {
+    padding: 50px 20px;
+    width: 100%;
+    @include Flex(column, center, center, 0);
+
+    &__title {
+      width: 80%;
+      @include Inter(48px, 600, 42px);
+    }
+
+    &__text {
+      width: 80%;
+      @include Inter(28px, 500, 30px);
+    }
+
+    &-buttons {
+      width: 80%;
+      padding-top: 2vh;
+      @include Flex(column, center, center, 0.5vh);
+
+      &__btn1 {
+        width: 100%;
+        @include Flex(row, center, center, 0.2vw);
+        @include Inter(28px, 600, 20px);
+        padding: 1vh 0;
+      }
+
+      &__btn2 {
+        width: 100%;
+        @include Inter(28px, 600, 20px);
+        padding: 1vh 0;
+      }
+    }
+  }
+  .footer{
+    padding-left: 15px;
+    @include Flex(column, flex-start, flex-start, 3vw);
+    &-block {
+      @include Flex(column, flex-start, flex-start, 3vw);
+      &-container1 {
+        &-texts {
+          width: 99%;
+
+          .Logo {
+            @include Merriweather(48px, 700, 40px);
+          }
+        }
+      }
+
+      &-container2 {
+        @include Flex(row, flex-start, flex-start, 4vw);
+        flex-wrap: wrap;
+
+        &-list {
+          padding-right: 55px;
+          @include Flex(column, flex-start, flex-start, 3vw);
+
+          &-item {
+            &__link {
+              @include Inter(20px, 600, 20px);
+            }
+          }
+        }
+
+        &-text2 {
+          &__title {
+            @include Inter(28px, 600, 20px);
+          }
+        }
+      }
+    }
+    &-under{
+      width: 90%;
+      @include Flex(column, flex-start, flex-start, 3vw);
+      &__text{
+        @include Inter(28px, 500, 20px);
+      }
+      &-under2{
+        padding: 0;
+        @include Flex(row,center,space-between,1vw);
+        &__text{
+          @include Inter(28px, 500, 20px);
+        }
+
+      }
+    }
+  }
+}
+
+.updated-style {
+  width: 80%;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 52px;
+}
+
+.updated-text {
+  width: 80%;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.updated-style2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 56px;
+}
+
+.updated-text2 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+}

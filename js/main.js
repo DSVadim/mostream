@@ -20,27 +20,23 @@ function changeBannerClass(newClass) {
         });
 }
 function toggleLightCard(activeCardSelector, bannerClass) {
-        const cards = document.querySelectorAll('.section1-trend-slider-card1__text, .section1-trend-slider-card2__text, .section1-trend-slider-card3__text, .section1-trend-slider-card4__text, .section1-trend-slider-card5__text');
+    const cards = document.querySelectorAll('.section1-trend-slider-card1__text, .section1-trend-slider-card2__text, .section1-trend-slider-card3__text, .section1-trend-slider-card4__text, .section1-trend-slider-card5__text');
 
-        cards.forEach(card => {
-                card.classList.remove('light');
-        });
+    cards.forEach(card => {
+        card.classList.remove('light');
+    });
 
-        const activeCard = document.querySelector(activeCardSelector);
-        activeCard.classList.add('light');
+    const activeCard = document.querySelector(activeCardSelector);
+    activeCard.classList.add('light');
 
-        changeBannerClass(bannerClass);
+    localStorage.setItem('selectedBannerClass', bannerClass);
+
+    changeBannerClass(bannerClass);
 }
+
 
 function Url(url) {
     document.querySelectorAll('.section1-buttons__btn1').forEach(button => {
-        button.addEventListener('click', () => {
-            window.location.href = url;
-        });
-    })
-}
-function UrlMore(url) {
-    document.querySelectorAll('.section1-buttons__btn2').forEach(button => {
         button.addEventListener('click', () => {
             window.location.href = url;
         });
@@ -86,7 +82,6 @@ document.querySelector('.section1-trend-slider-card1')
 
             toggleLightCard('.section1-trend-slider-card1__text', 'baner2');
             Url('https://www.youtube.com/watch?v=q2rlaaRvKEo');
-            UrlMore('https://planetakino.ua/movies/arctic-justice/#today');
 
     });
 
@@ -105,7 +100,6 @@ document.querySelector('.section1-trend-slider-card2')
             })
             toggleLightCard('.section1-trend-slider-card2__text', 'baner1');
             Url('https://www.youtube.com/watch?v=O8WVLkr49CU');
-            UrlMore('https://planetakino.ua/movies/the-garfield-movie/#today');
     });
 
 document.querySelector('.section1-trend-slider-card3')
@@ -124,7 +118,6 @@ document.querySelector('.section1-trend-slider-card3')
 
             toggleLightCard('.section1-trend-slider-card3__text', 'baner');
             Url('https://www.youtube.com/watch?v=PDxtjIFfB1M');
-            UrlMore('https://planetakino.ua/movies/elio/#today')
     });
 
 document.querySelector('.section1-trend-slider-card4')
@@ -143,7 +136,6 @@ document.querySelector('.section1-trend-slider-card4')
 
             toggleLightCard('.section1-trend-slider-card4__text', 'baner3');
             Url('https://www.youtube.com/watch?v=wIQE7rBdr1c');
-            UrlMore('https://planetakino.ua/movies/10-lives/#today');
     });
 
 document.querySelector('.section1-trend-slider-card5')
@@ -162,7 +154,6 @@ document.querySelector('.section1-trend-slider-card5')
 
             toggleLightCard('.section1-trend-slider-card5__text', 'baner4');
             Url('https://www.youtube.com/watch?v=7pZ_jQFnJ2g');
-            UrlMore('https://planetakino.ua/movies/despicable-me-4/#today');
     });
 document.querySelector('.buttons-svg__img')
     .addEventListener('click', function () {
