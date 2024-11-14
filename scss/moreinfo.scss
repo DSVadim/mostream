@@ -175,7 +175,6 @@ body{
     }
   }
 }
-.main {
   .section2 {
     padding: 80px;
     width: 90%;
@@ -359,7 +358,6 @@ body{
       }
     }
   }
-}
 .footer{
   @include Flex(column,center,center,6vh);
   padding-top: 7vh;
@@ -549,6 +547,70 @@ body{
         width: 100%;
         @include Inter(28px, 600, 20px);
         padding: 1vh 0;
+      }
+    }
+  }
+  .section3{
+  &-images{
+    padding: 0 40px;
+    width: 100%;
+    @include Flex(column,center,center,15px);
+    &-image{
+      width: 100%;
+      &__img{
+        width: 80%;
+      }
+    }
+  }
+  }
+  .section4{
+    &-images{
+      @include Flex(column,center,center,15px);
+      &-image1{
+        width: 90%;
+        &__text{
+          @include Inter(28px, 500, 20px);
+        }
+        &-back{
+          height: 800px;
+          width: 100%;
+        }
+      }
+      &-image2{
+        width: 90%;
+        &-back{
+          height: 800px;
+          width: 100%;
+        }
+      }
+      &-image3{
+        width: 90%;
+        &-back{
+          height: 800px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .section5 {
+    &__title {
+      width: 87%;
+      @include Inter(48px, 600, 32px);
+    }
+    &__text {
+      width: 87%;
+      @include Inter(28px, 500, 20px);
+    }
+
+    &-inputs {
+      @include Flex(column, center, center, 1vh);
+      &__input{
+        @include Inter(28px, 500, 20px);
+        width: 144%;
+      }
+      &__btn {
+        width: 159%;
+        @include Inter(28px, 600, 20px);
       }
     }
   }

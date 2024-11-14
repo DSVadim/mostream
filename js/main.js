@@ -1,7 +1,6 @@
 document.body.onload = function (){
     toggleLightCard('.section1-trend-slider-card3__text', 'baner');
     Url('https://www.youtube.com/watch?v=PDxtjIFfB1M');
-    UrlMore('https://planetakino.ua/movies/elio/#today')
 }
 
 document.querySelectorAll('.section5-list-item__img').forEach(img => {
