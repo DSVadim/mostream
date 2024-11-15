@@ -94,9 +94,6 @@ function showModal() {
     width: 255px;
     height: 255px;
     }
-    .modal-content__img.js{
-    content: url("../img/js.svg");
-    }
       .modal-content__btn{
       padding: 15px 0;
       font-weight: 600;
@@ -143,8 +140,6 @@ function showModal() {
     `;
 
     document.body.insertAdjacentHTML('beforeend', html);
-    const img= document.querySelector('.modal-content__img');
-    img.classList.add('js')
 }
 
 function closeModal() {
