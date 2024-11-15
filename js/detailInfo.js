@@ -177,6 +177,15 @@ function lightExport(activeExportSelector){
         activeExport.classList.add('light');
     })
 }
+function scoupCard(activeImageSelector){
+    const cards = document.querySelectorAll('.section4-images-image1,.section4-images-image2,.section4-images-image3')
+    cards.forEach(card => {
+        card.classList.remove('scoup');
+    })
+
+    const activeCard = document.querySelector(activeImageSelector);
+    activeCard.classList.add('scoup');
+}
 function lightCard(activeCardSelector,activeExportSelector){
     const cards = document.querySelectorAll('.section4-images-image1-back,.section4-images-image2-back,.section4-images-image3-back')
     cards.forEach(card => {
@@ -189,16 +198,19 @@ function lightCard(activeCardSelector,activeExportSelector){
 }
 document.querySelector('.section4-images-image1')
     .addEventListener('click', function (){
+        scoupCard('.section4-images-image1')
         lightCard('.section4-images-image1-back' ,'.section4-images-image1-label__img')
         lightText('.section4-images-image1-label__text')
     })
 document.querySelector('.section4-images-image2')
     .addEventListener('click', function (){
+        scoupCard('.section4-images-image2')
         lightCard('.section4-images-image2-back','.section4-images-image2-label__img')
         lightText('.section4-images-image2-label__text')
     })
 document.querySelector('.section4-images-image3')
     .addEventListener('click', function (){
+        scoupCard('.section4-images-image3')
         lightText('.section4-images-image3-label__text')
         lightCard('.section4-images-image3-back','.section4-images-image3-label__img')
     })
