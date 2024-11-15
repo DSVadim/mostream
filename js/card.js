@@ -58,7 +58,7 @@ function showModal() {
                 <span class="close-btn" onclick="closeModal()" style="position: absolute; top: 10px; right: 10px; cursor: pointer; font-size: 50px;">&times;</span>
                 <p class="modal-content__title">Payment Success</p>
                 <p class="modal-content__text">Thank You for Choosing MOSTREAM - Get Ready for Uninterrupted Cinematic Bliss</p>
-                <img class="modal-content__img" src="/img/js.svg" alt="img">
+                <img class="modal-content__img" src="../img/js.svg" alt="img">
                 <button class="modal-content__btn" onclick="closeModal()">Back to Home</button>
             </div>
         </div>
