@@ -23,7 +23,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     } else if (!emailPattern.test(email)) {
         document.getElementById('emailError').textContent = 'Invalid email format';
         isValid = false;
-    }
+    }sdf
 
     if (password === '') {
         document.getElementById('passwordError').textContent = 'Input your password';
