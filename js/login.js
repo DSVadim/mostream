@@ -21,7 +21,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     if (password === '') {
         document.getElementById('passwordError').textContent = 'Input your password';
         isValid = false;
-    }sdf
+    }
 
     if (isValid) {
         console.log('Form successfully submitted');
