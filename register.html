@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,600&family=Merriweather:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/register.css">
+  <link rel="stylesheet" href="scss/register.css">
 </head>
 <body>
 <div class="container1">
@@ -16,18 +16,21 @@
     <p class="container1-texts__title">Join the Cinematic Society Experience</p>
     <p class="container1-texts__subtitle">Unlock the Gates to a World of Infinite Movie Magic with Seamless Registration - Your Passport to Personalized Film Adventures Awaits!</p>
   </div>
-  <div class="container1-form">
+  <form class="container1-form" id="contactForm">
     <p class="container1-form__title">Name<span class="container1-form__title--red">*</span></p>
-    <input class="container1-form__input" type="text" placeholder="Input username">
+    <input id="name" class="container1-form__input" type="text" placeholder="Input username">
+    <span class="Error" id="nameError"></span>
     <p class="container1-form__title">Email<span class="container1-form__title--red">*</span></p>
-    <input class="container1-form__input" type="email" placeholder="example@mostream.com" required>
+    <input id="email" class="container1-form__input" type="email" placeholder="example@mostream.com" required>
+    <span class="Error" id="emailError"></span>
     <p class="container1-form__title">Password<span class="container1-form__title--red">*</span></p>
-    <input class="container1-form__input" type="password" placeholder="Input password" required>
-  </div>
-  <div class="container1-buttons">
-    <button class="container1-buttons__btn">Getting Started</button>
-    <button class="container1-buttons__btn2"><img class="container1-buttons__img" src="img/google.svg">Register with Google</button>
-  </div>
+    <input id="password" class="container1-form__input" type="password" placeholder="Input password" required>
+    <span class="Error" id="passwordError"></span>
+    <div class="container1-form-buttons">
+      <button type="submit" class="container1-form-buttons__btn">Getting Started</button>
+      <button class="container1-form-buttons__btn2"><img class="container1-form-buttons__img" src="img/google.svg">Register with Google</button>
+    </div>
+  </form>
   <div class="container1-signin">
     <p class="container1-signin__text">Already have an account?</p>
     <a class="container1-signin__link" onclick="document.location='login.html'">Sign In</a>
@@ -36,4 +39,5 @@
 <div class="container2">
 </div>
 </body>
+<script src="js/register.js"></script>
 </html>

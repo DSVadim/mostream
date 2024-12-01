@@ -50,29 +50,29 @@ body{
         background-color: transparent;
         border-color: #383838;
       }
+      &-buttons {
+        padding-top:50px ;
+        width: 100%;
+        @include Flex(column, flex-start, center, 15px);
+
+        &__btn {
+          border-radius: 8px;
+          padding: 15px 0;
+          width: 100%;
+          color: $main-color;
+          background-color: $secondary-color;
+          border-color: #F14141;
+        }
+
+        &__btn2 {
+          border-radius: 8px;
+          padding: 15px 0;
+          width: 100%;
+          color: $main-color;
+          background-color: #383838;
+          border-color: #383838;
+        }
     }
-
-    &-buttons {
-      width: 60%;
-      @include Flex(column, flex-start, center, 15px);
-
-      &__btn {
-        border-radius: 8px;
-        padding: 15px 0;
-        width: 100%;
-        color: $main-color;
-        background-color: $secondary-color;
-        border-color: #F14141;
-      }
-
-      &__btn2 {
-        border-radius: 8px;
-        padding: 15px 0;
-        width: 100%;
-        color: $main-color;
-        background-color: #383838;
-        border-color: #383838;
-      }
     }
 
     &-signin {
@@ -126,26 +126,25 @@ body{
           padding: 20px 0;
           @include Inter(36px, 500, 20px);
         }
-      }
+        &-buttons {
+          width: 90%;
+          @include Flex(column, flex-start, center, 15px);
 
-      &-buttons {
-        width: 90%;
-        @include Flex(column, flex-start, center, 15px);
+          &__btn {
+            @include Inter(36px, 500, 20px);
+            padding: 30px 0;
+          }
 
-        &__btn {
-          @include Inter(36px, 500, 20px);
-          padding: 30px 0;
-        }
+          &__btn2 {
+            @include Inter(36px, 500, 20px);
+            padding: 30px 0;
+          }
 
-        &__btn2 {
-          @include Inter(36px, 500, 20px);
-          padding: 30px 0;
-        }
-
-        &__img {
-          width: 40px;
-          height: 40px;
-          padding-right: 15px;
+          &__img {
+            width: 40px;
+            height: 40px;
+            padding-right: 15px;
+          }
         }
       }
 

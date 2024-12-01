@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign In</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="scss/login.css">
 </head>
 <body>
 <div class="section1">
@@ -13,16 +13,18 @@
         <p class="section1-container1-texts__title">Access the Cinematic Realm with Elegance</p>
         <p class="section1-container1-texts__subtitle">A Refined Entrance: Secure Your Journey into a World of Timeless Film Excellence</p>
     </div>
-    <div class="section1-container1-form">
+    <form id="contactForm" class="section1-container1-form">
         <p class="section1-container1-form__title">Email<span class="section1-container1-form__title--red">*</span></p>
-        <input class="section1-container1-form__input" type="email" placeholder="example@mostream.com" required>
+        <input id="email" class="section1-container1-form__input" type="email" placeholder="example@mostream.com" required>
+        <span class="Error" id="emailError"></span>
         <p class="section1-container1-form__title">Password<span class="section1-container1-form__title--red">*</span></p>
-        <input class="section1-container1-form__input" type="password" placeholder="Input password" required>
-    </div>
-    <div class="section1-container1-buttons">
-        <button class="section1-container1-buttons__btn">Getting Started</button>
-        <button class="section1-container1-buttons__btn2"><img class="section1-container1-buttons__img" src="img/google.svg">Register with Google</button>
-    </div>
+        <input id="password" class="section1-container1-form__input" type="password" placeholder="Input password" required>
+        <span class="Error" id="passwordError"></span>
+        <div class="section1-container1-form-buttons">
+            <button type="submit" class="section1-container1-form-buttons__btn">Getting Started</button>
+            <button class="section1-container1-form-buttons__btn2"><img class="section1-container1-form-buttons__img" src="img/google.svg">Register with Google</button>
+        </div>
+    </form>
     <div class="section1-container1-signin">
         <p class="section1-container1-signin__text">Don’t have an account?</p>
         <a class="section1-container1-signin__link" onclick="document.location='register.html'">Register</a>
@@ -30,4 +32,5 @@
 </div>
 </div>
 </body>
+<script src="js/login.js"></script>
 </html>
