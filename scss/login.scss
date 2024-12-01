@@ -9,7 +9,7 @@ body{
   background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16,0.9)), url("../img/login.png");
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
+  background-position: center;
   height: 100vh;
   &-container1 {
     backdrop-filter: brightness(90%);
@@ -96,7 +96,7 @@ body{
   }
   .section1 {
     @include Flex(column, center, flex-start, 15px);
-    padding: 15px 50px;
+    padding: 0;
     width: 100%;
     &-container1 {
       @include Flex(column, center, flex-start, 56px);

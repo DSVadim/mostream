@@ -82,10 +82,11 @@ body{
 @media screen and (max-width: 1512px) and (min-width: 375px) {
   body{
     @include Flex(column,center,center,0);
+    overflow: visible;
   }
   .container1 {
     @include Flex(column,center,center,0);
-    padding: 15px 50px;
+    padding: 0;
     width: 100%;
     .Logo {
       padding: 15px 50px;

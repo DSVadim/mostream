@@ -109,6 +109,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0;
+    overflow: visible;
   }
   .container1 {
     display: flex;
@@ -116,7 +117,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0;
-    padding: 15px 50px;
+    padding: 0;
     width: 100%;
   }
   .container1 .Logo {
