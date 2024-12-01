@@ -495,29 +495,36 @@ body{
       height: fit-content;
     }
 
-    .buttons {
-      width: 100%;
+    .buttons{
+      width: 80%;
       display: none;
-
       &-svg {
-        display: none;
+        &__img {
+          width: 50px;
+          height: 50px;
+        }
       }
-
-      &__btn1 {
-        @include Inter(32px, 600, 24px);
-        width: 40%;
-      }
-
-      &__btn2 {
-        @include Inter(32px, 600, 24px);
-        width: 40%;
+      .buttons1{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        &__btn1{
+          padding: 15px 0;
+          @include Inter(32px,600,24px);
+          width: 80%;
+        }
+        &__btn2{
+          padding: 15px 0;
+          @include Inter(32px,600,24px);
+          width: 80%;
+        }
       }
     }
-
-    .buttons.open {
+    .buttons.open{
       background-color: rgba(16, 16, 16, 0.23);
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       transform: translateY(0);
       opacity: 1;
       z-index: 2;
