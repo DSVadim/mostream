@@ -830,7 +830,7 @@ body {
     z-index: 2;
   }
   .header .buttons {
-    width: 80%;
+    width: 100%;
     display: none;
   }
   .header .buttons-svg__img {
