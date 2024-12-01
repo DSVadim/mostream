@@ -93,6 +93,7 @@ body{
   body {
     @include Flex(column, center, flex-start, 0);
     overflow-y: hidden;
+    background-color: $background-color;
   }
   .section1 {
     @include Flex(column, center, flex-start, 15px);
