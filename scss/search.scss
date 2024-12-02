@@ -157,6 +157,9 @@ body{
     width: 90%;
     @include Flex(column, center, center, 50px);
 
+    &-card1 {
+      @include Flex(row,center,center,25px);
+    }
     &-card {
       @include Flex(row,center,center,25px);
       &-texts {
@@ -199,6 +202,15 @@ body{
     @include Inter(16px, 500, 24px);
     padding: 5px 0;
   }
+  &__img{
+    width: 25px;
+    height: 25px;
+  }
+
+  &__img.down{
+    transform: rotate(180deg);
+  }
+
 }
 .section3{
   text-align: center;
@@ -460,7 +472,6 @@ body{
       &-block2 {
         width: 100%;
         @include Flex(column, center, center, 100px);
-
         &-card {
           width: 100%;
           @include Flex(column, center, center, 25px);
@@ -494,7 +505,6 @@ body{
           }
         }
       }
-
       &__btn {
         @include Inter(32px, 500, 48px);
         padding: 15px 0;
