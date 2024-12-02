@@ -194,23 +194,19 @@ body{
       }
     }
   }
-  &__btn{
-    @include Flex(row,center,center,5px);
+  &__btn {
+    @include Flex(row, center, center, 5px);
     width: 80%;
     color: $main-color;
     background-color: $secondary-bg-color;
     @include Inter(16px, 500, 24px);
     padding: 5px 0;
-  }
-  &__img{
-    width: 25px;
-    height: 25px;
-  }
 
-  &__img.down{
-    transform: rotate(180deg);
+    &__img {
+      width: 25px;
+      height: 25px;
+    }
   }
-
 }
 .section3{
   text-align: center;
@@ -513,12 +509,12 @@ body{
       .section3 {
         &__title {
           width: 87%;
-          @include Inter(48px, 600, 32px);
+          @include Inter(48px, 600, 52px);
         }
 
         &__text {
           width: 87%;
-          @include Inter(28px, 500, 20px);
+          @include Inter(28px, 500, 40px);
         }
 
         &-inputs {

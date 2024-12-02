@@ -649,12 +649,12 @@ body{
     .section2{
       &__title {
         width: 87%;
-        @include Inter(48px, 600, 32px);
+        @include Inter(48px, 600, 52px);
       }
 
       &__text {
         width: 87%;
-        @include Inter(28px, 500, 20px);
+        @include Inter(28px, 500, 40px);
       }
 
       &-inputs {

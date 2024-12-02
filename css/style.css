@@ -1172,14 +1172,14 @@ body {
     font-family: "Inter", sans-serif;
     font-size: 48px;
     font-weight: 600;
-    line-height: 32px;
+    line-height: 52px;
   }
   .main .section6__text {
     width: 87%;
     font-family: "Inter", sans-serif;
     font-size: 28px;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 40px;
   }
   .main .section6-inputs {
     display: flex;
